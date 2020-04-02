@@ -35,6 +35,85 @@
 </header>
 
 <main class="main">
+  <div class="section">
+    <h1 class="section__title">Оставьте свой отзыв</h1>
+    <p class="section__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+  </div>
+
+  <form class="review" action="https://echo.htmlacademy.ru" method="post">
+    <fieldset class="review__item">
+      <legend class="review__title">Представьтесь:</legend>
+      <label class="review__label-normal">
+        Имя*: <input class="review__input" type="text" name="name" value="Петр" required>
+      </label>
+      <label class="review__label-normal">
+        Фамилия*: <input class="review__input" type="text" name="surname" value="Иванов" required>
+      </label>
+      <label class="review__label-normal">
+        Отчество: <input class="review__input" type="text" name="patronymic" value="Алексадрович">
+      </label>
+    </fieldset>
+
+    <fieldset class="review__item">
+      <legend class="review__title">Контактная информация:</legend>
+      <label class="review__label-normal">
+        Контактный телефон*: <input class="review__input review__input--tel" type="tel" name="phone" value="Введите телефон" required>
+      </label>
+      <label class="review__label-normal">
+        Электронная почта*: <input class="review__input review__input--email" type="email" name="email" value="Введите e-mail" required>
+      </label>
+    </fieldset>
+
+    <fieldset class="review__item">
+      <legend class="review__title">Ваше общее впечатление:</legend>
+      <label class="review__label-bold">
+        <input class="review__radio" type="radio" name="impress" value="positive" checked> Скорее положительное
+      </label>
+      <label class="review__label-bold">
+        <input class="review__radio" type="radio" name="impress" value="negative"> Скорее отрицательное
+      </label>
+      <label class="review__label-bold">
+        <input class="review__radio" type="radio" name="impress" value="no-answer"> Затрудняюсь ответить
+      </label>
+    </fieldset>
+
+    <fieldset class="review__item">
+      <legend class="review__title">Посещенные достопримечательности:</legend>
+      <label class="review__label-bold">
+        <input class="review__checkbox" type="checkbox" name="bridge" checked> Мост Дьвола
+      </label>
+      <label class="review__label-bold">
+        <input class="review__checkbox" type="checkbox" name="mountain" checked> Гора-Колокол
+      </label>
+      <label class="review__label-bold">
+        <input class="review__checkbox" type="checkbox" name="park" checked> Слайд-парк
+      </label>
+      <label class="review__label-bold">
+        <input class="review__checkbox" type="checkbox" name="rocks"> Красные скалы
+      </label>
+    </fieldset>
+
+    <fieldset class="review__item">
+      <legend class="review__title">Опишите свои эмоции:</legend>
+      <textarea class="review__textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
+    </fieldset>
+
+    <div class="review__button button">
+      <input type="submit" value="Отправить отзыв">
+    </div>
+  </form>
+
+  <div class="popup popup--error">
+    <b class="popup__title">Что-то пошло не так!</b>
+    <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="popup__button button">ОК</button>
+  </div>
+
+  <div class="popup popup--sent">
+    <b class="popup__title">Ваш отзыв отправлен!</b>
+    <p class="popup__text">Спасибо за ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <button class="popup__button button">Закрыть окно</button>
+  </div>
 
 </main>
 
