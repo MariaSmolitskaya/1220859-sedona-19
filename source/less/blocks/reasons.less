@@ -1,7 +1,7 @@
 .reasons {
+  width: 100%;
   text-align: center;
   line-height: 26px;
-  margin: 0 auto;
 }
 
 .reasons__title {
@@ -10,19 +10,38 @@
   color: @black;
 }
 
+.reasons__text {
+  margin: 0;
+  line-height: 21px;
+}
+
+.reasons__number {
+  margin-top: 0;
+}
+
 .reasons--light {
-  width: 255px;
+  margin-top: 43px;
+  margin-bottom: 29px;
+}
+
+.reasons--light .reasons__text {
+  line-height: 26px;
+  margin-top: 26px;
+}
+
+.reasons--blue {
+  background-color: @light-blue;
+  color: @base-color;
+  padding-top: 43px;
+  padding-bottom: 45px;
 }
 
 .reasons--blue .reasons__title {
   color: @base-color;
 }
 
-.reasons--blue {
-  background-color: @light-blue;
-  color: @base-color;
-}
-
 .reasons--gray {
-  background-color: @gray;
+  background-color: @gray-light;
+  padding-top: 33px;
+  padding-bottom: 32px;
 }

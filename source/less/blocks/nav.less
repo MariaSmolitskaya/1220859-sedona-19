@@ -1,5 +1,5 @@
 .nav__wrapper {
-  width: 320px;
+  width: 100%;
   font-size: 18px;
   line-height: 40px;
   color: @base-color;
@@ -7,11 +7,11 @@
 }
 
 .nav__list {
+  padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__item {
@@ -19,7 +19,7 @@
   flex-direction: column;
   justify-content: center;
   height: 55px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid @gray;
   text-align: center;
 }
 
