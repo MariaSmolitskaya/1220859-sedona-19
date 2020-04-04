@@ -1,12 +1,30 @@
 .reasons {
   text-transform: uppercase;
   text-align: center;
+  line-height: 26px;
+  margin: 0 auto;
 }
+
+.reasons__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: @black;
+}
+
 .reasons--light {
-  background-color: @base-color;
+  width: 255px;
+}
+
+.reasons--blue .reasons__title {
+  color: @base-color;
 }
 
 .reasons--blue {
   background-color: @light-blue;
   color: @base-color;
+}
+
+.reasons--gray {
+  background-color: @gray;
+  line-height: 21px;
 }
