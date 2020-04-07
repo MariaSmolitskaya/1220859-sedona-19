@@ -19,8 +19,19 @@
   flex-direction: column;
   justify-content: center;
   height: 55px;
-  box-shadow: @shadow;
   text-align: center;
+}
+
+.nav__item:nth-child(2) {
+  box-shadow: @shadow-outer;
+}
+
+.nav__item:nth-child(n+3) {
+  box-shadow: @shadow-both;
+}
+
+.nav__item:last-child {
+  box-shadow: @shadow-inner;
 }
 
 .nav__link {
