@@ -1,7 +1,9 @@
 .reasons {
-  width: 100%;
+  margin: 0;
   text-align: center;
   line-height: 26px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .reasons__title {
@@ -24,15 +26,8 @@
   line-height: 26px;
 }
 
-.reasons--light .reasons__title {
-  margin-left: 32px;
-  margin-right: 33px;
-}
-
 .reasons--light .reasons__text {
   margin-top: 26px;
-  margin-left: 32px;
-  margin-right: 33px;
 }
 
 .reasons--blue {
@@ -46,26 +41,20 @@
   color: @base-color;
 }
 
-.reasons--blue .reasons__text {
-  margin-left: 28px;
-  margin-right: 27px;
+.reasons--gray {
+  background-color: @gray-light;
+  padding-top: 33px;
+  padding-bottom: 32px;
 }
 
-.reasons--gray {
+.reasons--gray-border {
   background-color: @gray-light;
   padding-bottom: 32px;
 }
 
-.reasons--gray .reasons__text {
-  margin-left: 41px;
-  margin-right: 41px;
-}
-
-.main .reasons--gray:first-child {
-  padding-top: 33px;
-}
-
-.main ~ .reasons--gray::before {
+/*.reasons--gray:nth-child(9) .reasons__title::before,
+ .reasons--gray:nth-child(10) .reasons__title::before */
+.reasons--gray-border::before {
   content: "";
   display: block;
   width: 280px;
@@ -73,4 +62,5 @@
   box-shadow: @shadow;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 33px;
 }
