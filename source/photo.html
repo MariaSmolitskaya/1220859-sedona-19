@@ -3,40 +3,48 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" as="font">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="main-header">
-  <a class="main-header__logo">
-    <img class="main-header__logo-img" src="https://via.placeholder.com/102x83" alt="Логотип City of Sedona" width="102px" height="83px">
-  </a>
 
   <nav class="nav">
-    <button class="nav__toggle" type="button"></button>
     <div class="nav__wrapper">
       <ul class="nav__list">
         <li class="nav__item button-close">х</li>
         <li class="nav__item">
-          <a href="index.html">Главная</a>
+          <a class="nav__link" href="index.html">Главная</a>
         </li>
         <li class="nav__item">
-          <a>Фото и видео</a>
+          <a class="nav__link" href="photo.html">Фото и видео</a>
         </li>
         <li class="nav__item">
-          <a href="form.html">Форма отзыва</a>
+          <a class="nav__link" href="form.html">Форма отзыва</a>
         </li>
         <li class="nav__item">
-          <a href="#">HTML Academy</a>
+          <a class="nav__link" href="#">HTML Academy</a>
         </li>
       </ul>
     </div>
   </nav>
+
+  <div class="main-header__wrapper">
+    <a class="main-header__logo">
+      <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona" width="102px" height="83px">
+    </a>
+    <button class="main-header__nav-toggle" type="button">
+      <img class="main-header__nav-img" src="img/icon-menu.svg" alt="Меню" width="23px" height="18px">
+    </button>
+  </div>
+
 </header>
 
 <main class="main">
 
-  <div class="intro">
-    <img class="intro__img" src="" alt="Пейзаж Седона">
+  <div class="intro intro--small">
+    <img class="intro__img" src="img/text-sedona.svg" alt="Пейзаж Седона" width="229px" height="39px">
   </div>
 
   <div class="section">
@@ -45,28 +53,28 @@
   </div>
 
     <div class="photos">
-      <img class="photos__img" src="https://via.placeholder.com/280x280" alt="Неродные просторы" width="280px" height="280px">
+      <img class="photos__img" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" width="280px" height="280px">
       <h2 class="photos__title">Неродные просторы</h2>
       <p class="photos__author">Автор фото: Борис</p>
       <p class="photo__likes">1350</p>
     </div>
 
     <div class="photos">
-      <img class="photos__img" src="https://via.placeholder.com/280x280" alt="Местная растительность" width="280px" height="280px">
+      <img class="photos__img" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" width="280px" height="280px">
       <h2 class="photos__title">Местная растительность</h2>
       <p class="photos__author">Автор фото: Сергей</p>
       <p class="photo__likes">143</p>
     </div>
 
     <div class="photos">
-      <img class="photos__img" src="https://via.placeholder.com/280x280" alt="Дорога на север" width="280px" height="280px">
+      <img class="photos__img" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север" width="280px" height="280px">
       <h2 class="photos__title">Дорога на Север</h2>
       <p class="photos__author">Автор фото: Петр</p>
       <p class="photo__likes">96</p>
     </div>
 
     <div class="photos">
-      <img class="photos__img" src="https://via.placeholder.com/280x280" alt="Мост Дьявола" width="280px" height="280px">
+      <img class="photos__img" src="img/photo-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="280px" height="280px">
       <h2 class="photos__title">Мост Дьявола</h2>
       <p class="photos__author">Автор фото: Антон</p>
       <p class="photo__likes">254</p>
@@ -78,34 +86,30 @@
   </div>
 
   <video class="video" preload="metadata" width="321" height="201">
-    <source src="" type="">
+    <source src="https://via.placeholder.com/321x201" type="">
   </video>
-
-  <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d705223.8373802291!2d-112.14745185043793!3d34.8058234264564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1585671372388!5m2!1sru!2sru" width="320" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-  </div>
 
 </main>
 
 <footer class="main-footer">
     <span class="main-footer__hashtag">#Visitsedona</span>
-    <div class="main-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vk" href="#">Вконтакте</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">Facebook</a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">YouTube</a>
-        </li>
-      </ul>
+  <div class="main-footer__contacts contacts">
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <a class="contacts__link contacts__link--vk" href="#">Вконтакте</a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link contacts__link--facebook" href="#">Facebook</a>
+      </li>
+      <li class="contacts__item">
+        <a class="contacts__link contacts__link--youtube" href="#">YouTube</a>
+      </li>
+    </ul>
+  </div>
     <div class="main-footer__copyright copyright">
       <b class="copyright__text">Разработано:</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
-  </div>
 </footer>
 
 </body>
