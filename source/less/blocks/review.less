@@ -1,8 +1,17 @@
+.review {
+  padding-left: 23px;
+  padding-right: 21px;
+}
+
 .review__item {
   border-top: 1px solid @gray;
   border-bottom: 0 none;
   border-right: 0 none;
   border-left: 0 none;
+  width: 276px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .review__title {
@@ -23,6 +32,10 @@
   background-color: @gray-light;
   border: none;
   padding-left: 22px;
+}
+
+.review__label-normal {
+  padding-bottom: 14px;
 }
 
 .review__label-bold {
@@ -60,9 +73,7 @@
   resize: none;
 }
 
-.review__button {
+.review__submit {
   width: 280px;
-  height: 58px;
-  background-color: @light-blue;
-  color: @base-color;
+  font-size: 21px;
 }
