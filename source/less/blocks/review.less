@@ -19,8 +19,6 @@
   font-weight: bold;
   color: @black;
   text-align: center;
-  margin-top: 24px;
-  margin-bottom: 25px;
 }
 
 .review__input {
@@ -32,10 +30,19 @@
   background-color: @gray-light;
   border: none;
   padding-left: 22px;
+  margin-bottom: 20px;
 }
 
-.review__label-normal {
-  padding-bottom: 14px;
+input[name="name"] {
+  margin-left: 14px;
+}
+
+input[name="surname"] {
+  margin-left: 13px;
+}
+
+input[name="patronymic"] {
+  margin-left: 18px;
 }
 
 .review__label-bold {
@@ -43,6 +50,8 @@
   font-weight: bold;
   color: @black;
   text-transform: none;
+  display: flex;
+  align-items: center;
 }
 
 .review__radio {
@@ -51,11 +60,13 @@
   border-radius: 50%;
   outline: none;
   border: 0 none;
+  margin-right: 20px;
 }
 
 .review__checkbox {
   width: 46px;
   height: 46px;
+  margin-right: 20px;
 }
 
 .review__textarea {
