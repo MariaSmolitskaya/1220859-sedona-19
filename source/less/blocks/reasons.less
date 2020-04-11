@@ -42,25 +42,20 @@
 }
 
 .reasons--gray {
+  position: relative;
   background-color: @gray-light;
   padding-top: 33px;
   padding-bottom: 32px;
 }
 
-.reasons--gray-border {
-  background-color: @gray-light;
-  padding-bottom: 32px;
-}
-
-/*.reasons--gray:nth-child(9) .reasons__title::before,
- .reasons--gray:nth-child(10) .reasons__title::before */
-.reasons--gray-border::before {
+.reasons--border::before {
   content: "";
   display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -140px;
   width: 280px;
   height: 1px;
   box-shadow: @shadow-both;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 33px;
 }

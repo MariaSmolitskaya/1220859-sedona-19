@@ -47,14 +47,14 @@
     <img class="intro__img" src="img/text-sedona.svg" alt="Пейзаж Седона" width="229px" height="39px">
   </div>
 
-  <div class="section">
+  <div class="section section--review">
     <h1 class="section__title">Оставьте свой отзыв</h1>
     <p class="section__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
   </div>
 
   <form class="review" action="https://echo.htmlacademy.ru" method="post">
-    <fieldset class="review__item">
-      <legend class="review__title">Представьтесь:</legend>
+    <fieldset class="review__item review--intro">
+      <h2 class="review__title">Представьтесь:</h2>
       <label class="review__label-normal">
         Имя*: <input class="review__input" type="text" name="name" value="Петр" required>
       </label>
@@ -66,8 +66,8 @@
       </label>
     </fieldset>
 
-    <fieldset class="review__item">
-      <legend class="review__title">Контактная информация:</legend>
+    <fieldset class="review__item review--contacts">
+      <h2 class="review__title">Контактная информация:</h2>
       <label class="review__label-normal">
         Контактный телефон*: <input class="review__input review__input--tel" type="tel" name="phone" value="Введите телефон" required>
       </label>
@@ -76,8 +76,8 @@
       </label>
     </fieldset>
 
-    <fieldset class="review__item">
-      <legend class="review__title">Ваше общее впечатление:</legend>
+    <fieldset class="review__item review--impress">
+      <h2 class="review__title">Ваше общее впечатление:</h2>
       <label class="review__label-bold">
         <input class="review__radio" type="radio" name="impress" value="positive" checked> Скорее положительное
       </label>
@@ -89,8 +89,8 @@
       </label>
     </fieldset>
 
-    <fieldset class="review__item">
-      <legend class="review__title">Посещенные достопримечательности:</legend>
+    <fieldset class="review__item review--sites">
+      <h2 class="review__title">Посещенные достопримечательности:</h2>
       <label class="review__label-bold">
         <input class="review__checkbox" type="checkbox" name="bridge" checked> Мост Дьвола
       </label>
@@ -106,12 +106,12 @@
     </fieldset>
 
     <fieldset class="review__item">
-      <legend class="review__title">Опишите свои эмоции:</legend>
+      <h2 class="review__title">Опишите свои эмоции:</h2>
       <textarea class="review__textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
     </fieldset>
 
-    <div class="review__button button">
-      <input type="submit" value="Отправить отзыв">
+    <div class="review__button" >
+      <input class="review__submit button" type="submit" value="Отправить отзыв">
     </div>
   </form>
 
@@ -124,30 +124,40 @@
   <div class="popup popup--sent">
     <b class="popup__title">Ваш отзыв отправлен!</b>
     <p class="popup__text">Спасибо за ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-    <button class="popup__button button">Закрыть окно</button>
+    <div class="popup__wrapper">
+      <button class="popup__button button">Закрыть окно</button>
+    </div>
   </div>
 
 </main>
 
 <footer class="main-footer">
-    <span class="main-footer__hashtag">#Visitsedona</span>
+  <span class="main-footer__hashtag">#Visitsedona</span>
   <div class="main-footer__contacts contacts">
     <ul class="contacts__list">
       <li class="contacts__item">
-        <a class="contacts__link contacts__link--vk" href="#">Вконтакте</a>
+        <a class="contacts__link contacts__link--vk" href="#">
+          <img class="contacts__img"  src="img/icon-twitter.svg" alt="Твиттер" width="18" height="15">
+        </a>
       </li>
       <li class="contacts__item">
-        <a class="contacts__link contacts__link--facebook" href="#">Facebook</a>
+        <a class="contacts__link contacts__link--facebook" href="#">
+          <img class="contacts__img" src="img/icon-facebook.svg" alt="Facebook" width="9" height="19">
+        </a>
       </li>
       <li class="contacts__item">
-        <a class="contacts__link contacts__link--youtube" href="#">YouTube</a>
+        <a class="contacts__link contacts__link--youtube" href="#">
+          <img class="contacts__img" src="img/icon-youtube.svg" alt="YouTube" width="20" height="14">
+        </a>
       </li>
     </ul>
   </div>
-    <div class="main-footer__copyright copyright">
-      <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-    </div>
+  <div class="main-footer__copyright copyright">
+    <b class="copyright__text">Разработано:</b>
+    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+    </a>
+  </div>
 </footer>
 
 </body>
