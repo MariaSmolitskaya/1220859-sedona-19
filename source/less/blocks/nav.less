@@ -41,3 +41,24 @@
   text-decoration: none;
   font-weight: bold;
 }
+
+@media (min-width: @tablet-width) {
+  .nav__list {
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: @base-color;
+  }
+
+  .nav__item {
+    box-shadow: none;
+  }
+
+  .nav__item:first-child {
+    display: none;
+  }
+
+  .nav__link {
+    color: @black;
+    font-size: 14px;
+  }
+}
