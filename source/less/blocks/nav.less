@@ -45,20 +45,31 @@
 @media (min-width: @tablet-width) {
   .nav__list {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: @base-color;
   }
 
   .nav__item {
     box-shadow: none;
+    width: 153px;
   }
 
   .nav__item:first-child {
     display: none;
   }
 
+  .nav__item:nth-child(4) {
+    margin-left: auto;
+  }
+
   .nav__link {
     color: @black;
     font-size: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nav__item {
+    width: 239px;
   }
 }
