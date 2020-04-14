@@ -1,5 +1,5 @@
 .main-footer {
-  width: 100%;
+  width: 320px;
   margin-top: 41px;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,15 @@
 
 @media (min-width: @tablet-width) {
   .main-footer {
+    width: 768px;
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer {
+    width: 1200px;
   }
 }

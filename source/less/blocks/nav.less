@@ -1,5 +1,5 @@
 .nav__wrapper {
-  width: 100%;
+  width: 320px;
   font-size: 18px;
   line-height: 40px;
   color: @base-color;
@@ -43,6 +43,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .nav__wrapper {
+    width: 768px;
+  }
+
   .nav__list {
     flex-direction: row;
     justify-content: flex-start;
@@ -73,6 +77,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .nav__wrapper {
+    width: 1200px;
+  }
+
   .nav__item {
     width: 239px;
   }
