@@ -48,22 +48,26 @@
       <img class="intro__img" src="img/text-sedona-index.svg" alt="Пейзаж Седона" width="281px" height="214px">
     </div>
 
-    <div class="reasons__item reasons--light">
+    <div class="reasons__item reasons__item--light">
       <div class="reasons__wrapper">
         <b class="reasons__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
         <p class="reasons__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
     </div>
 
-     <div class="reasons">
-       <div class="reasons__item reasons--blue">
+     <div class="reasons reasons--first">
+       <div class="reasons__item reasons__item--blue">
          <b class="reasons__title">Настоящий городок</b>
          <p class="reasons__number">— №1 —</p>
          <p class="reasons__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
        </div>
 
-       <div class="img-reasons">
-         <img class="img" src="img/main-city-mobile@1x.jpg" alt="Домик в Седоне" width="320" height="260">
+       <div class="reasons__img">
+         <picture>
+           <source class="img" srcset="img/main-city-tablet@1x.jpg" media="(min-width: 768px)">
+           <source class="img" srcset="img/main-city-desktop@1x.jpg" media="(min-width: 1200px)">
+           <img class="img" src="img/main-city-mobile@1x.jpg" alt="Домик в Седоне">
+         </picture>
        </div>
      </div>
 
@@ -84,32 +88,36 @@
         </ul>
       </section>
 
-    <div class="reasons">
-      <div class="reasons__item reasons--blue">
+    <div class="reasons reasons--second">
+      <div class="reasons__item reasons__item--blue">
         <b class="reasons__title">Там есть мост дьявола</b>
         <p class="reasons__number">— №2 —</p>
         <p class="reasons__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
       </div>
 
-      <div class="img-reasons img-reasons--bridge">
-        <img class="img" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="320" height="260">
+      <div class="reasons__img reasons__img--bridge">
+        <picture>
+          <source class="img" srcset="img/main-bridge-tablet@1x.jpg" media="(min-width: 768px)">
+          <source class="img" srcset="img/main-bridge-desktop@1x.jpg" media="(min-width: 1200px">
+          <img class="img" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола">
+        </picture>
       </div>
     </div>
 
     <div class="reasons">
-      <div class="reasons__item reasons--gray">
+      <div class="reasons__item reasons__item--gray">
         <b class="reasons__title">Небольшая площадь</b>
         <p class="reasons__number">— №3 —</p>
         <p class="reasons__text">Все интересные места находятся очень близко</p>
       </div>
 
-      <div class="reasons__item reasons--gray reasons--border">
+      <div class="reasons__item reasons__item--gray reasons--border">
         <b class="reasons__title">Красивая дорога</b>
         <p class="reasons__number">— №4 —</p>
         <p class="reasons__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </div>
 
-      <div class="reasons__item reasons--gray reasons--border">
+      <div class="reasons__item reasons__item--gray reasons--border">
         <b class="reasons__title">Мало туристов</b>
         <p class="reasons__number">— №5 —</p>
         <p class="reasons__text">Большинство едет в Гранд Каньон и толпится там</p>
