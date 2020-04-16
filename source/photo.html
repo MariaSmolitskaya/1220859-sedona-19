@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" as="font">
   <link rel="stylesheet" href="css/style.css">
@@ -32,7 +33,10 @@
 
   <div class="main-header__wrapper">
     <a class="main-header__logo">
-      <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona" width="102px" height="83px">
+      <picture>
+        <source class="main-header__logo-img" srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+        <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona">
+      </picture>
     </a>
     <button class="main-header__nav-toggle" type="button">
       <img class="main-header__nav-img" src="img/icon-menu.svg" alt="Меню" width="23px" height="18px">
@@ -42,60 +46,90 @@
 </header>
 
 <main class="main">
+  <div class="main__wrapper">
+    <div class="intro intro--small">
+      <img class="intro__img" src="img/text-sedona.svg" alt="Пейзаж Седона" width="229px" height="39px">
+    </div>
 
-  <div class="intro intro--small">
-    <img class="intro__img" src="img/text-sedona.svg" alt="Пейзаж Седона" width="229px" height="39px">
-  </div>
-
-  <div class="section section--photo">
-    <h1 class="section__title">Фото и видео</h1>
-    <p class="section__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-  </div>
-
-    <div class="photos">
-      <div class="photos__item">
-        <img class="photos__img" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы" width="280" height="280">
-        <h2 class="photos__title">Неродные просторы</h2>
-        <p class="photos__author">Автор фото: Борис</p>
-        <p class="photo__likes">1350</p>
+    <div class="section section--photo">
+      <div class="section__wrapper">
+        <h1 class="section__title">Фото и видео</h1>
+        <p class="section__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </div>
     </div>
 
-    <div class="photos">
-      <div class="photos__item">
-        <img class="photos__img" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
-        <h2 class="photos__title">Местная растительность</h2>
-        <p class="photos__author">Автор фото: Сергей</p>
-        <p class="photo__likes">143</p>
+    <section class="photos">
+      <div class="photo">
+        <div class="photo__item">
+          <picture>
+            <source class="photo__img" srcset="img/photo-sunset-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source class="photo__img" srcset="img/photo-sunset-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="photo__img" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
+          </picture>
+          <div class="photo__desc">
+            <h2 class="photo__title">Неродные просторы</h2>
+            <p class="photo__author">Автор фото: Борис</p>
+            <p class="photo__likes">1350</p>
+          </div>
+        </div>
       </div>
+
+      <div class="photo">
+        <div class="photo__item">
+          <picture>
+            <source class="photo__img" srcset="img/photo-cactus-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source class="photo__img" srcset="img/photo-cactus-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="photo__img" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность" width="280" height="280">
+          </picture>
+
+          <div class="photo__desc">
+            <h2 class="photo__title">Местная растительность</h2>
+            <p class="photo__author">Автор фото: Сергей</p>
+            <p class="photo__likes">143</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo">
+        <div class="photo__item">
+          <picture>
+            <source class="photo__img" srcset="img/photo-roads-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source class="photo__img" srcset="img/photo-roads-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="photo__img" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север" width="280" height="280">
+          </picture>
+          <div class="photo__desc">
+            <h2 class="photo__title">Дорога на Север</h2>
+            <p class="photo__author">Автор фото: Петр</p>
+            <p class="photo__likes">96</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo">
+        <div class="photo__item">
+          <picture>
+            <source class="photo__img" srcset="img/photo-bridge-desktop@1x.jpg" media="(min-width: 1200px)">
+            <source class="photo__img" srcset="img/photo-bridge-tablet@1x.jpg" media="(min-width: 768px)">
+            <img class="photo__img" src="img/photo-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="280" height="280">
+          </picture>
+          <div class="photo__desc">
+            <h2 class="photo__title">Мост Дьявола</h2>
+            <p class="photo__author">Автор фото: Антон</p>
+            <p class="photo__likes">254</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section section--video">
+      <b class="section__title">Все еще сомневаетесь?</b>
+      <p class="section__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подоражали в очередной раз!</p>
     </div>
 
-    <div class="photos">
-      <div class="photos__item">
-        <img class="photos__img" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север" width="280" height="280">
-        <h2 class="photos__title">Дорога на Север</h2>
-        <p class="photos__author">Автор фото: Петр</p>
-        <p class="photo__likes">96</p>
-      </div>
+    <div class="video">
+      <img class="video__img" src="img/video-mobile@1x.jpg" alt="Дорога в Седону" width="320" height="201">
+      <span class="video__controls"></span>
     </div>
-
-    <div class="photos">
-      <div class="photos__item">
-        <img class="photos__img" src="img/photo-bridge-mobile@1x.jpg" alt="Мост Дьявола" width="280" height="280">
-        <h2 class="photos__title">Мост Дьявола</h2>
-        <p class="photos__author">Автор фото: Антон</p>
-        <p class="photo__likes">254</p>
-      </div>
-    </div>
-
-  <div class="section section--video">
-    <b class="section__title">Все еще сомневаетесь?</b>
-    <p class="section__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подоражали в очередной раз!</p>
-  </div>
-
-  <div class="video">
-    <img class="video__img" src="img/video-mobile@1x.jpg" alt="Дорога в Седону" width="321" height="201">
-    <span class="video__controls"></span>
   </div>
 
 </main>

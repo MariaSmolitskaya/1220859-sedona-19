@@ -14,3 +14,29 @@
   line-height: 26px;
   color: @black;
 }
+
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .advantages__item {
+    text-align: center;
+  }
+
+  .advantages__item--home {
+    margin-left: 51px;
+    margin-right: 103px;
+  }
+
+  .advantages__item--souvenirs {
+    order: 1;
+    margin-right: 46px;
+  }
+
+  .advantages__item--food {
+    margin-right: 100px;
+  }
+}

@@ -1,4 +1,5 @@
-.reasons {
+.reasons__item {
+  box-sizing: border-box;
   margin: 0;
   text-align: center;
   line-height: 26px;
@@ -14,34 +15,35 @@
 
 .reasons__text {
   margin: 0;
+  line-height: 21px;
 }
 
 .reasons__number {
   margin-top: 0;
 }
 
-.reasons--light {
+.reasons__item--light {
   margin-top: 43px;
   margin-bottom: 29px;
   line-height: 26px;
 }
 
-.reasons--light .reasons__text {
+.reasons__item--light .reasons__text {
   margin-top: 26px;
 }
 
-.reasons--blue {
+.reasons__item--blue {
   background-color: @light-blue;
   color: @base-color;
   padding-top: 61px;
   padding-bottom: 45px;
 }
 
-.reasons--blue .reasons__title {
+.reasons__item--blue .reasons__title {
   color: @base-color;
 }
 
-.reasons--gray {
+.reasons__item--gray {
   position: relative;
   background-color: @gray-light;
   padding-top: 33px;
@@ -58,4 +60,111 @@
   width: 280px;
   height: 1px;
   box-shadow: @shadow-both;
+}
+
+@media (min-width: @tablet-width) {
+  .reasons {
+    display: flex;
+  }
+
+  .reasons__wrapper {
+    width: 490px;
+    margin: 0 auto;
+  }
+
+  .reasons__item--light {
+    margin-bottom: 55px;
+  }
+
+  .reasons__item--blue {
+    width: 256px;
+    height: 256px;
+  }
+
+  .reasons--first,
+  .reasons--second {
+    height: 256px;
+  }
+
+  .reasons--first .reasons__item--blue {
+    padding: 46px 47px 49px 47px;
+  }
+
+  .reasons--second .reasons__item--blue {
+    padding: 50px 51px 47px 51px;
+  }
+
+  .reasons__item--gray {
+    padding-top: 50px;
+  }
+
+  .reasons--gray:first-child {
+    padding-left: 49px;
+    padding-right: 109px;
+  }
+
+  .reasons--gray:nth-child(2) {
+    padding-right: 119px;
+  }
+
+  .reasons--gray:last-child {
+    padding-right: 55px;
+  }
+
+  .reasons__title {
+    font-size: 21px;
+  }
+
+  .reasons--border::before {
+    display: none;
+  }
+
+  .img {
+    margin: 0;
+  }
+
+  .reasons__img--bridge {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reasons__item--blue {
+    width: 400px;
+  }
+
+  .img {
+    width: 800px;
+    height: 256px;
+    object-fit: cover;
+  }
+
+  .reasons--first .reasons__item--blue {
+    padding: 53px 67px 63px 68px;
+  }
+
+  .reasons--second .reasons__item--blue {
+    padding: 58px 93px 60px 94px;
+  }
+
+  .reasons__item--gray {
+    padding-bottom: 70px;
+  }
+
+  .reasons--gray:first-child {
+    padding-left: 57px;
+    padding-right: 58px;
+  }
+
+  .reasons--gray:nth-child(2) {
+    padding-right: 69px;
+  }
+
+  .reasons--gray:last-child {
+    padding-right: 55px;
+  }
+
+  .reasons__item--gray .reasons__title {
+    word-spacing: 200px;
+  }
 }
