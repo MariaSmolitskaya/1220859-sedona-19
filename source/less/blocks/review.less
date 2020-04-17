@@ -125,3 +125,137 @@ input[name="patronymic"] {
   font-size: 21px;
   margin: 51px 20px 47px;
 }
+
+.review__note {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .review {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .review--impress,
+  .review--intro {
+    border-top: 0 none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .review--impress .review__title::after {
+    content: "";
+    display: inline;
+    width: 1px;
+    height: 292px;
+    background-color: @gray;
+    position: absolute;
+    left: 50%;
+  }
+
+  .review--impress {
+    order: -1;
+    margin-right: 70px;
+  }
+
+  .review--impress .review__title {
+    margin-bottom: 67px;
+  }
+
+  .review--contacts,
+  .review--sites,
+  .review--desc {
+    flex-basis: 100%;
+  }
+
+  .review__label-bold {
+    margin-top: 30px;
+  }
+
+  .review--intro .review__title {
+    margin-bottom: 60px;
+  }
+
+  .review--contacts {
+    margin-top: 73px;
+    padding-bottom: 0;
+  }
+
+  .review--contacts .review__label-normal {
+    margin-top: 31px;
+    margin-bottom: 0;
+  }
+
+  .review--contacts .review__title,
+  .review--sites .review__title,
+  .review--desc .review__title {
+    width: 396px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+    background-color: @base-color;
+  }
+
+  .review--sites {
+    margin-top: 78px;
+    padding-bottom: 0;
+  }
+
+  .review--sites .review__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 468px;
+    margin: 0 auto;
+  }
+
+  .review--sites .review__label-bold {
+    flex-basis: 234px;
+  }
+
+  .review--desc {
+    margin-top: 99px;
+    padding: 0;
+  }
+
+  .review--desc .review__title {
+    margin-bottom: 60px;
+  }
+
+  .review__textarea {
+    width: 100%;
+  }
+
+  .review__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .review__submit {
+    width: 324px;
+    height: 58px;
+    margin-top: 58px;
+    margin-left: 0;
+  }
+
+  .review__note {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  input[name="name"] {
+    width: 350px;
+  }
+
+  input[name="surname"] {
+    width: 312px;
+  }
+
+  input[name="patronymic"] {
+    width: 314px;
+  }
+}

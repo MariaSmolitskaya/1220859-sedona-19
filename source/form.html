@@ -33,7 +33,10 @@
 
   <div class="main-header__wrapper">
     <a class="main-header__logo">
-      <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona" width="102px" height="83px">
+      <picture>
+        <source class="main-header__logo-img" srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+        <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona">
+      </picture>
     </a>
     <button class="main-header__nav-toggle" type="button">
       <img class="main-header__nav-img" src="img/icon-menu.svg" alt="Меню" width="23px" height="18px">
@@ -43,92 +46,99 @@
 </header>
 
 <main class="main">
-
-  <div class="intro intro--small">
-    <img class="intro__img" src="img/text-sedona.svg" alt="Пейзаж Седона" width="229px" height="39px">
-  </div>
-
-  <div class="section section--review">
-    <h1 class="section__title">Оставьте свой отзыв</h1>
-    <p class="section__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-  </div>
-
-  <form class="review" action="https://echo.htmlacademy.ru" method="post">
-    <fieldset class="review__item review--intro">
-      <h2 class="review__title">Представьтесь:</h2>
-      <label class="review__label-normal">
-        Имя*: <input class="review__input" type="text" name="name" value="Петр" required>
-      </label>
-      <label class="review__label-normal">
-        Фамилия*: <input class="review__input" type="text" name="surname" value="Иванов" required>
-      </label>
-      <label class="review__label-normal">
-        Отчество: <input class="review__input" type="text" name="patronymic" value="Алексадрович">
-      </label>
-    </fieldset>
-
-    <fieldset class="review__item review--contacts">
-      <h2 class="review__title">Контактная информация:</h2>
-      <label class="review__label-normal">
-        Контактный телефон*: <input class="review__input review__input--tel" type="tel" name="phone" value="Введите телефон" required>
-      </label>
-      <label class="review__label-normal">
-        Электронная почта*: <input class="review__input review__input--email" type="email" name="email" value="Введите e-mail" required>
-      </label>
-    </fieldset>
-
-    <fieldset class="review__item review--impress">
-      <h2 class="review__title">Ваше общее впечатление:</h2>
-      <label class="review__label-bold">
-        <input class="review__radio" type="radio" name="impress" value="positive" checked> Скорее положительное
-      </label>
-      <label class="review__label-bold">
-        <input class="review__radio" type="radio" name="impress" value="negative"> Скорее отрицательное
-      </label>
-      <label class="review__label-bold">
-        <input class="review__radio" type="radio" name="impress" value="no-answer"> Затрудняюсь ответить
-      </label>
-    </fieldset>
-
-    <fieldset class="review__item review--sites">
-      <h2 class="review__title">Посещенные достопримечательности:</h2>
-      <label class="review__label-bold">
-        <input class="review__checkbox" type="checkbox" name="bridge" checked> Мост Дьвола
-      </label>
-      <label class="review__label-bold">
-        <input class="review__checkbox" type="checkbox" name="mountain" checked> Гора-Колокол
-      </label>
-      <label class="review__label-bold">
-        <input class="review__checkbox" type="checkbox" name="park" checked> Слайд-парк
-      </label>
-      <label class="review__label-bold">
-        <input class="review__checkbox" type="checkbox" name="rocks"> Красные скалы
-      </label>
-    </fieldset>
-
-    <fieldset class="review__item">
-      <h2 class="review__title">Опишите свои эмоции:</h2>
-      <textarea class="review__textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
-    </fieldset>
-
-    <div class="review__button" >
-      <input class="review__submit button" type="submit" value="Отправить отзыв">
+  <div class="main__wrapper">
+    <div class="intro intro--small">
+      <img class="intro__img" src="img/text-sedona.svg" alt="Пейзаж Седона" width="229px" height="39px">
     </div>
-  </form>
 
-  <div class="popup popup--error">
-    <b class="popup__title">Что-то пошло не так!</b>
-    <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <button class="popup__button button">ОК</button>
-  </div>
+    <div class="section section--review">
+      <h1 class="section__title">Оставьте свой отзыв</h1>
+      <p class="section__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    </div>
 
-  <div class="popup popup--sent">
-    <b class="popup__title">Ваш отзыв отправлен!</b>
-    <p class="popup__text">Спасибо за ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-    <div class="popup__wrapper">
-      <button class="popup__button button">Закрыть окно</button>
+    <form class="review" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset class="review__item review--intro">
+        <h2 class="review__title">Представьтесь:</h2>
+        <label class="review__label-normal">
+          Имя*: <input class="review__input" type="text" name="name" value="Петр" required>
+        </label>
+        <label class="review__label-normal">
+          Фамилия*: <input class="review__input" type="text" name="surname" value="Иванов" required>
+        </label>
+        <label class="review__label-normal">
+          Отчество: <input class="review__input" type="text" name="patronymic" value="Алексадрович">
+        </label>
+      </fieldset>
+
+      <fieldset class="review__item review--contacts">
+        <h2 class="review__title">Контактная информация:</h2>
+        <label class="review__label-normal">
+          Контактный телефон*: <input class="review__input review__input--tel" type="tel" name="phone" value="Введите телефон" required>
+        </label>
+        <label class="review__label-normal">
+          Электронная почта*: <input class="review__input review__input--email" type="email" name="email" value="Введите e-mail" required>
+        </label>
+      </fieldset>
+
+      <fieldset class="review__item review--impress">
+        <h2 class="review__title">Ваше общее впечатление:</h2>
+        <label class="review__label-bold">
+          <input class="review__radio" type="radio" name="impress" value="positive" checked> Скорее положительное
+        </label>
+        <label class="review__label-bold">
+          <input class="review__radio" type="radio" name="impress" value="negative"> Скорее отрицательное
+        </label>
+        <label class="review__label-bold">
+          <input class="review__radio" type="radio" name="impress" value="no-answer"> Затрудняюсь ответить
+        </label>
+      </fieldset>
+
+      <fieldset class="review__item review--sites">
+        <h2 class="review__title">Посещенные достопримечательности:</h2>
+        <div class="review__wrapper">
+          <label class="review__label-bold">
+            <input class="review__checkbox" type="checkbox" name="bridge" checked> Мост Дьвола
+          </label>
+          <label class="review__label-bold">
+            <input class="review__checkbox" type="checkbox" name="mountain" checked> Гора-Колокол
+          </label>
+          <label class="review__label-bold">
+            <input class="review__checkbox" type="checkbox" name="park" checked> Слайд-парк
+          </label>
+          <label class="review__label-bold">
+            <input class="review__checkbox" type="checkbox" name="rocks"> Красные скалы
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="review__item review--desc">
+        <h2 class="review__title">Опишите свои эмоции:</h2>
+        <textarea class="review__textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
+      </fieldset>
+
+      <div class="review__button" >
+        <input class="review__submit button" type="submit" value="Отправить отзыв">
+        <span class="review__note">* — обязательные поля</span>
+      </div>
+
+    </form>
+
+    <div class="popup popup--error">
+      <b class="popup__title">Что-то пошло не так!</b>
+      <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="popup__button button">ОК</button>
+    </div>
+
+    <div class="popup popup--sent">
+      <b class="popup__title">Ваш отзыв отправлен!</b>
+      <p class="popup__text">Спасибо за ваше участие, Ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <div class="popup__wrapper">
+        <button class="popup__button button">Закрыть окно</button>
+      </div>
     </div>
   </div>
+
+
 
 </main>
 
