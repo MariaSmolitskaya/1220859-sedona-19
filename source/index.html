@@ -128,13 +128,20 @@
     </div>
 
     <div class="hotels">
-      <b class="hotels__title">Заинтересовались?</b>
-      <p class="hotels__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <div class="hotels__wrapper">
+        <b class="hotels__title">Заинтересовались?</b>
+        <p class="hotels__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      </div>
       <a class="hotels__button button" href="#">Найти гостиницу</a>
     </div>
 
     <div class="map">
-      <img class="map__img" src="img/bg-map-mobile@1x.jpg" alt="Карта" width="320" height="350">
+      <picture>
+        <source class="map__img" srcset="img/bg-map-desktop@1x.jpg" media="(min-width: 1200px)">
+        <source class="map__img" srcset="img/bg-map-tablet@1x.jpg" media="(min-width: 768px)">
+        <img class="map__img" src="img/bg-map-mobile@1x.jpg" alt="Карта">
+      </picture>
+
     </div>
     </div>
   </main>
