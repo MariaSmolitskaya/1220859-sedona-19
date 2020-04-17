@@ -127,8 +127,13 @@
     </div>
 
     <div class="video">
-      <img class="video__img" src="img/video-mobile@1x.jpg" alt="Дорога в Седону" width="320" height="201">
-      <span class="video__controls"></span>
+      <picture>
+        <source class="video__img" srcset="img/video-desktop@1x.jpg" media="(min-width: 1200px)">
+        <source class="video__img" srcset="img/video-tablet@1x.jpg" media="(min-width: 768px)">
+        <img class="video__img" src="img/video-mobile@1x.jpg" alt="Дорога в Седону">
+
+      </picture>
+      <div class="video__controls"></div>
     </div>
   </div>
 
