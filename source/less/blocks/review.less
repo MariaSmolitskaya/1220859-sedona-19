@@ -138,6 +138,11 @@ input[name="patronymic"] {
     padding-right: 60px;
   }
 
+  .review__title {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
   .review--impress,
   .review--intro {
     border-top: 0 none;
@@ -157,10 +162,12 @@ input[name="patronymic"] {
 
   .review--impress {
     order: -1;
-    margin-right: 70px;
+    margin-right: 45px;
   }
 
   .review--impress .review__title {
+    margin-top: 0;
+    margin-left: -10px;
     margin-bottom: 67px;
   }
 
@@ -175,12 +182,14 @@ input[name="patronymic"] {
   }
 
   .review--intro .review__title {
+    margin-top: 0;
+    margin-left: -50px;
     margin-bottom: 60px;
   }
 
   .review--contacts {
-    margin-top: 73px;
-    padding-bottom: 0;
+    margin-top: 58px;
+    padding: 0;
   }
 
   .review--contacts .review__label-normal {
@@ -199,7 +208,7 @@ input[name="patronymic"] {
   }
 
   .review--sites {
-    margin-top: 78px;
+    margin-top: 75px;
     padding-bottom: 0;
   }
 
@@ -215,7 +224,7 @@ input[name="patronymic"] {
   }
 
   .review--desc {
-    margin-top: 99px;
+    margin-top: 70px;
     padding: 0;
   }
 
@@ -247,12 +256,18 @@ input[name="patronymic"] {
 }
 
 @media (min-width: @desktop-width) {
+  .review {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
   .review--impress {
-    flex-grow: 1;
+    flex-basis: 500px;
   }
 
   .review--intro .review__title {
     text-align: left;
+    margin-left: 0;
   }
 
   input[name="name"] {
@@ -301,5 +316,18 @@ input[name="patronymic"] {
   .review--sites .review__wrapper {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .review--sites .review__label-bold {
+    margin-top: 20px;
+    flex-basis: auto;
+  }
+
+  .review--desc {
+    margin-top: 80px;
+  }
+
+  .review__submit {
+    width: 480px;
   }
 }

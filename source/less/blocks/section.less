@@ -32,11 +32,13 @@
 
   .section--review {
     width: 439px;
-    margin: 71px auto 84px;
+    padding: 0;
+    margin: 71px auto 55px;
   }
 
   .section__title {
     font-size: 30px;
+    line-height: 26px;
   }
 
   .section__text {
@@ -45,5 +47,11 @@
 
   .section--video {
     padding: 68px 177px 78px 176px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .section--review {
+    margin: 108px auto 40px;
   }
 }
