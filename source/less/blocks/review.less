@@ -94,6 +94,7 @@ input[name="patronymic"] {
   outline: none;
   border: 0 none;
   margin-right: 20px;
+  margin-left: 0;
 }
 
 /*----- Блок достопримечательности -----*/
@@ -162,13 +163,13 @@ input[name="patronymic"] {
 
   .review--impress {
     order: -1;
-    margin-right: 45px;
+    margin-right: 105px;
   }
 
   .review--impress .review__title {
     margin-top: 0;
     margin-left: -10px;
-    margin-bottom: 67px;
+    margin-bottom: 60px;
   }
 
   .review--contacts,
@@ -193,7 +194,7 @@ input[name="patronymic"] {
   }
 
   .review--contacts .review__label-normal {
-    margin-top: 31px;
+    margin-top: 20px;
     margin-bottom: 0;
   }
 
@@ -212,19 +213,29 @@ input[name="patronymic"] {
     padding-bottom: 0;
   }
 
+  .review--sites .review__title {
+    margin-top: -20px;
+  }
+
   .review--sites .review__wrapper {
     display: flex;
     flex-wrap: wrap;
     width: 468px;
     margin: 0 auto;
+    justify-content: space-between;
   }
 
   .review--sites .review__label-bold {
     flex-basis: 234px;
   }
 
+  .review--sites .review__label-bold:nth-child(2),
+  .review--sites .review__label-bold:nth-child(2) {
+    flex-basis: 200px;
+  }
+
   .review--desc {
-    margin-top: 70px;
+    margin-top: 84px;
     padding: 0;
   }
 
@@ -263,6 +274,7 @@ input[name="patronymic"] {
 
   .review--impress {
     flex-basis: 500px;
+    margin-right: 59px;
   }
 
   .review--intro .review__title {
@@ -311,6 +323,7 @@ input[name="patronymic"] {
 
   .review--sites {
     padding: 0;
+    margin-top: 90px;
   }
 
   .review--sites .review__wrapper {
