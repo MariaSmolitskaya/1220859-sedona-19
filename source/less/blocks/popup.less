@@ -60,3 +60,50 @@
   background-color: @gray-light;
   border: 1px solid transparent;
 }
+
+@media (min-width: @tablet-width) {
+  .popup--error {
+    width: 400px;
+    height: 347px;
+    padding-bottom: 39px;
+  }
+
+  .popup__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup--error .popup__title {
+    margin: 64px 62px 30px 61px;
+  }
+
+  .popup--error .popup__text {
+    margin-left: 60px;
+    margin-right: 61px;
+  }
+
+  .popup--error .popup__button {
+    width: 272px;
+  }
+
+  .popup--sent {
+    width: 640px;
+    height: 347px;
+    padding-top: 64px;
+  }
+
+  .popup--sent .popup__text {
+    margin-left: 112px;
+    margin-right: 114px;
+  }
+
+  .popup--sent .popup__button {
+    width: 458px;
+    margin-top: 44px;
+  }
+
+  .popup__wrapper {
+    box-sizing: border-box;
+    height: 146px;
+  }
+}

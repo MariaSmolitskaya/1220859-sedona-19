@@ -94,6 +94,7 @@ input[name="patronymic"] {
   outline: none;
   border: 0 none;
   margin-right: 20px;
+  margin-left: 0;
 }
 
 /*----- Блок достопримечательности -----*/
@@ -124,4 +125,222 @@ input[name="patronymic"] {
   width: 280px;
   font-size: 21px;
   margin: 51px 20px 47px;
+}
+
+.review__note {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .review {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .review__title {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .review--impress,
+  .review--intro {
+    border-top: 0 none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .review--impress .review__title::after {
+    content: "";
+    display: inline;
+    width: 1px;
+    height: 292px;
+    background-color: @gray;
+    position: absolute;
+    left: 50%;
+  }
+
+  .review--impress {
+    order: -1;
+    margin-right: 105px;
+  }
+
+  .review--impress .review__title {
+    margin-top: 0;
+    margin-left: -10px;
+    margin-bottom: 60px;
+  }
+
+  .review--contacts,
+  .review--sites,
+  .review--desc {
+    flex-basis: 100%;
+  }
+
+  .review__label-bold {
+    margin-top: 30px;
+  }
+
+  .review--intro .review__title {
+    margin-top: 0;
+    margin-left: -50px;
+    margin-bottom: 60px;
+  }
+
+  .review--contacts {
+    margin-top: 58px;
+    padding: 0;
+  }
+
+  .review--contacts .review__label-normal {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .review--contacts .review__title,
+  .review--sites .review__title,
+  .review--desc .review__title {
+    width: 396px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+    background-color: @base-color;
+  }
+
+  .review--sites {
+    margin-top: 75px;
+    padding-bottom: 0;
+  }
+
+  .review--sites .review__title {
+    margin-top: -20px;
+  }
+
+  .review--sites .review__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 468px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .review--sites .review__label-bold {
+    flex-basis: 234px;
+  }
+
+  .review--sites .review__label-bold:nth-child(2),
+  .review--sites .review__label-bold:nth-child(2) {
+    flex-basis: 200px;
+  }
+
+  .review--desc {
+    margin-top: 84px;
+    padding: 0;
+  }
+
+  .review--desc .review__title {
+    margin-bottom: 60px;
+  }
+
+  .review__textarea {
+    width: 100%;
+  }
+
+  .review__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .review__submit {
+    width: 324px;
+    height: 58px;
+    margin-top: 58px;
+    margin-left: 0;
+  }
+
+  .review__note {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .review--impress {
+    flex-basis: 500px;
+    margin-right: 59px;
+  }
+
+  .review--intro .review__title {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  input[name="name"] {
+    width: 350px;
+  }
+
+  input[name="surname"] {
+    width: 312px;
+  }
+
+  input[name="patronymic"] {
+    width: 314px;
+  }
+
+  .review--contacts {
+    padding: 0;
+  }
+
+  .review--contacts .review__wrapper {
+    display: flex;
+  }
+
+  .review__input--tel {
+    margin-right: 137px;
+  }
+
+  .review__input--tel,
+  .review__input--email {
+    width: 257px;
+    margin-left: 16px;
+  }
+
+  .review--contacts .review__label-normal {
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .review__hidden {
+    display: none;
+  }
+
+  .review--sites {
+    padding: 0;
+    margin-top: 90px;
+  }
+
+  .review--sites .review__wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .review--sites .review__label-bold {
+    margin-top: 20px;
+    flex-basis: auto;
+  }
+
+  .review--desc {
+    margin-top: 80px;
+  }
+
+  .review__submit {
+    width: 480px;
+  }
 }
