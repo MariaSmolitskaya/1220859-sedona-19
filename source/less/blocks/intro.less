@@ -4,6 +4,7 @@
   background-image: url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 }
 
 .intro--big {
@@ -21,6 +22,11 @@
   margin: 0 auto;
 }
 
+.intro__triangle {
+  position: absolute;
+  bottom: -6px;
+}
+
 @media (min-width: @tablet-width) {
   .intro {
     width: 768px;
@@ -35,6 +41,10 @@
   .intro--small {
     padding-top: 94px;
     padding-bottom: 116px;
+  }
+
+  .intro__triangle {
+    bottom: -5.5px;
   }
 }
 
