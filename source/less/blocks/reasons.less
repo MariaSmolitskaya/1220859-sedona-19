@@ -39,6 +39,10 @@
   bottom: -50px;
 }
 
+.reasons--first br {
+  display: none;
+}
+
 .reasons__item--blue {
   background-color: @light-blue;
   color: @base-color;
@@ -129,6 +133,7 @@
     padding-top: 45px;
     padding-bottom: 45px;
     flex-basis: 256px;
+    flex-grow: 1;
   }
 
   .reasons__item--gray br {
@@ -173,6 +178,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .reasons--first br {
+    display: inline-block;
+  }
+
   .reasons__item--blue {
     width: 400px;
   }
@@ -188,7 +197,7 @@
   }
 
   .reasons--second .reasons__item--blue {
-    padding: 58px 93px 60px 94px;
+    padding: 50px 90px 60px 90px;
   }
 
   .reasons__item--gray {
