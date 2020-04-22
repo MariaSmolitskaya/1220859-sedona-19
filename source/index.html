@@ -63,12 +63,11 @@
     </div>
 
     <div class="reasons__item reasons__item--light">
-      <svg class="reasons__triangle--top" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-           width="320px" height="26.111px" viewBox="440.469 30.889 320 26.111"
-           enable-background="new 440.469 30.889 320 26.111" xml:space="preserve" fill="black">
-        <polygon fill="#FFFFFF" points="760.469,57 760.469,30.889 599.955,57"/>
-        <polygon fill="#FFFFFF" points="440.469,57 599.955,57 440.469,31.056"/>
-      </svg>
+      <picture class="reasons__triangle--top">
+        <source class="reasons__picture" srcset="img/bg-intro-triangle-desktop.svg" media="(min-width: 1200px)">
+        <source class="reasons__picture" srcset="img/bg-intro-triangle-tablet.svg" media="(min-width: 768px)">
+        <img  class="reasons__picture" src="img/bg-intro-triangle-mobile.svg" >
+      </picture>
       <div class="reasons__wrapper">
         <b class="reasons__title">Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
         <p class="reasons__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
@@ -82,9 +81,9 @@
 
      <div class="reasons reasons--first">
        <div class="reasons__item reasons__item--blue">
-         <b class="reasons__title">Настоящий городок</b>
-         <p class="reasons__number">— №1 —</p>
-         <p class="reasons__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+           <b class="reasons__title">Настоящий городок</b>
+           <p class="reasons__number">— №1 —</p>
+           <p class="reasons__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
        </div>
 
        <div class="reasons__img">
@@ -143,7 +142,7 @@
 
     <div class="reasons reasons--second">
       <div class="reasons__item reasons__item--blue reasons__item--bridge">
-        <b class="reasons__title">Там есть мост дьявола</b>
+        <b class="reasons__title">Там есть <br> мост дьявола</b>
         <p class="reasons__number">— №2 —</p>
         <p class="reasons__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
       </div>
@@ -159,21 +158,23 @@
 
     <div class="reasons">
       <div class="reasons__item reasons__item--gray">
-        <b class="reasons__title">Небольшая площадь</b>
-        <p class="reasons__number">— №3 —</p>
-        <p class="reasons__text">Все интересные места находятся очень близко</p>
+          <b class="reasons__title">Небольшая площадь</b>
+          <p class="reasons__number">— №3 —</p>
+          <p class="reasons__text">Все интересные места находятся очень близко</p>
       </div>
 
       <div class="reasons__item reasons__item--gray reasons--border">
-        <b class="reasons__title">Красивая дорога</b>
-        <p class="reasons__number">— №4 —</p>
-        <p class="reasons__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <b class="reasons__title">Красивая дорога</b>
+          <p class="reasons__number">— №4 —</p>
+          <p class="reasons__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </div>
 
       <div class="reasons__item reasons__item--gray reasons--border">
-        <b class="reasons__title">Мало туристов</b>
-        <p class="reasons__number">— №5 —</p>
-        <p class="reasons__text">Большинство едет в Гранд Каньон и толпится там</p>
+        <div class="reasons__wrapper">
+          <b class="reasons__title">Мало туристов</b>
+          <p class="reasons__number">— №5 —</p>
+          <p class="reasons__text">Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
       </div>
     </div>
 
