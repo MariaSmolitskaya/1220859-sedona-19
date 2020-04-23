@@ -72,6 +72,7 @@ input[name="patronymic"] {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .review--contacts .review__input {
@@ -80,6 +81,28 @@ input[name="patronymic"] {
 
 .review__label-normal .review__wrapper {
   margin-left: 20px;
+}
+
+.review--contacts .review__label-normal::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  margin: 0;
+  background-color: @white-three;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.review--contacts .review__label--tel::after {
+  background-image: url("../../img/icon-phone.svg");
+}
+
+.review--contacts .review__label--email::after {
+  background-image: url("../../img/icon-mail.svg");
 }
 
 /*----- Блок впечатления -----*/
