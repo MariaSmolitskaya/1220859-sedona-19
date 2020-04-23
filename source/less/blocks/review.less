@@ -397,6 +397,10 @@ input[name="patronymic"] {
     margin-right: 59px;
   }
 
+  .review--impress .review__title {
+    margin-left: -70px;
+  }
+
   .review--intro .review__title {
     text-align: left;
     margin-left: 0;
@@ -416,25 +420,41 @@ input[name="patronymic"] {
 
   .review--contacts {
     padding: 0;
+    margin-top: 55px;
+  }
+
+  .review--contacts .review__title {
+    margin-bottom: 40px;
   }
 
   .review--contacts .review__wrapper {
     display: flex;
   }
 
-  .review__input--tel {
-    margin-right: 137px;
-  }
-
-  .review__input--tel,
-  .review__input--email {
-    width: 257px;
-    margin-left: 16px;
-  }
-
   .review--contacts .review__label-normal {
     flex-direction: row;
     align-items: baseline;
+
+    &::after {
+      top: 10px
+    }
+  }
+
+  .review--contacts .review__input {
+    margin-left: 12px;
+  }
+
+  .review__label-normal .review__wrapper {
+    margin-left: 0;
+  }
+
+  .review__label--tel {
+    width: 400px;
+    margin-right: 80px;
+  }
+
+  .review__label--email {
+    width: 483px;
   }
 
   .review__hidden {
@@ -443,12 +463,20 @@ input[name="patronymic"] {
 
   .review--sites {
     padding: 0;
-    margin-top: 90px;
+    margin-top: 80px;
+  }
+
+  .review--sites .review__title {
+    margin-bottom: 35px;
   }
 
   .review--sites .review__wrapper {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .review--sites .review__label-wrapper:nth-child(odd) {
+    flex-basis: auto;
   }
 
   .review--sites .review__label-bold {
@@ -457,7 +485,7 @@ input[name="patronymic"] {
   }
 
   .review--desc {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 
   .review__submit {
