@@ -13,6 +13,7 @@
 .review__title {
   font-size: 18px;
   font-weight: bold;
+  line-height: 26px;
   color: @black;
   text-align: center;
 }
@@ -46,7 +47,8 @@ input[name="patronymic"] {
 }
 
 .review--intro .review__title {
-  margin-bottom: 25px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .review--intro .review__label-normal {
@@ -62,6 +64,7 @@ input[name="patronymic"] {
 }
 
 .review--contacts .review__title {
+  margin-top: 10px;
   margin-bottom: 23px;
 }
 
@@ -81,11 +84,26 @@ input[name="patronymic"] {
 
 /*----- Блок впечатления -----*/
 .review--impress {
-  margin-bottom: 23px;
+  margin-bottom: 9px;
 }
 
 .review--impress .review__title {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
+}
+
+.review--impress .review__label-wrapper {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.review__radio {
+  z-index: -1;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
 }
 
 .review__label-bold {
@@ -93,41 +111,84 @@ input[name="patronymic"] {
   font-weight: bold;
   color: @black;
   text-transform: none;
-  display: flex;
-  align-items: center;
-  margin-top: 14px;
 }
 
-.review__radio {
-  width: 50px;
-  height: 50px;
+.review--impress .review__label-bold {
+  margin-left: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: @white-two;
+  }
+}
+
+.review__radio:checked + .review__label-bold::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  outline: none;
-  border: 0 none;
-  margin-right: 20px;
-  margin-left: 0;
+  background-color: @black-two;
 }
 
 /*----- Блок достопримечательности -----*/
-.review--sites {
-  margin-bottom: 15px;
+.review--sites .review__title {
+  margin-bottom: 20px;
 }
 
-.review--sites .review__title {
-  margin-bottom: 25px;
+.review--sites .review__label-wrapper {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 23px;
 }
 
 .review--sites .review__checkbox {
+  z-index: -1;
+  opacity: 0;
   width: 50px;
   height: 50px;
-  margin-right: 20px;
 }
 
 .review--sites .review__label-bold {
-  margin-top: 25px;
+  margin-left: 23px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    background-color: @white-two;
+    border-radius: 20%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 19px;
+    left: 16px;
+    width: 23px;
+    height: 16px;
+    background-image: url("../../img/icon-tick.svg");
+  }
 }
 
 /*----- Блок отзыв -----*/
+.review--desc .review__title {
+  margin-top: 10px;
+}
 
 .review__textarea {
   box-sizing: border-box;
