@@ -27,18 +27,23 @@
 @media (min-width: @tablet-width) {
   .section--photo {
     padding-top: 55px;
-    padding-bottom: 55px;
+    padding-bottom: 57px;
   }
 
   .section--photo .section__wrapper {
     width: 428px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: 142px;
   }
 
   .section--review {
     width: 439px;
     padding: 0;
-    margin: 75px auto 74px;
+    margin: 75px auto 74px 161px;
+  }
+
+  .section--review .section__text {
+    margin-top: 30px;
   }
 
   .section__title {
@@ -48,24 +53,39 @@
 
   .section__text {
     font-size: 14px;
+    margin-top: 28px;
   }
 
   .section--video {
-    padding: 68px 177px 55px 176px;
+    padding: 68px 177px 58px 176px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .section--review {
-    margin: 108px auto 60px;
+    margin: 111px auto 60px;
+  }
+
+  .section--review .section__text {
+    margin-bottom: 30px;
   }
 
   .section--photo {
     padding-top: 90px;
-    padding-bottom: 58px;
+    padding-bottom: 57px;
+  }
+
+  .section--photo .section__text {
+    margin-top: 32px;
+  }
+
+  .section--photo .section__wrapper {
+    margin-left: 358px;
   }
 
   .section--video {
-    padding-bottom: 80px;
+    width: 415px;
+    margin: 0 auto;
+    padding-bottom: 60px;
   }
 }

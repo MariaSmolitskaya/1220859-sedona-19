@@ -18,6 +18,10 @@
   margin-bottom: 36px;
 }
 
+.hotels__text br {
+  display: none;
+}
+
 .hotels__button {
   display: block;
   width: 280px;
@@ -40,7 +44,7 @@
   }
 
   .hotels__wrapper {
-    width: 434px;
+    width: 435px;
     margin: 0 auto;
   }
 
@@ -50,7 +54,12 @@
 
   .hotels__text {
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 27px;
+    margin-bottom: 42px;
+  }
+
+  .hotels__text br {
+    display: inline-block;
   }
 
   .hotels__button {
@@ -61,10 +70,15 @@
 
 @media (min-width: @desktop-width) {
   .hotels {
-    padding-top: 50px;
+    padding-top: 58px;
   }
 
   .hotels__button {
-    margin-bottom: 70px;
+    margin-bottom: 66px;
+  }
+
+  .hotels__text {
+    margin-top: 27px;
+    margin-bottom: 47px;
   }
 }

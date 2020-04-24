@@ -21,6 +21,7 @@
 .review__input {
   box-sizing: border-box;
   height: 58px;
+  font-family: @ff-primary;
   font-size: 18px;
   font-weight: bold;
   color: @black;
@@ -228,6 +229,7 @@ input[name="patronymic"] {
 }
 
 .review__submit {
+  font-family: @ff-primary;
   width: 280px;
   font-size: 21px;
   margin: 45px 20px 47px;
@@ -263,8 +265,8 @@ input[name="patronymic"] {
   }
 
   .review--impress .review__title {
-      margin-top: 0;
-      margin-bottom: 60px;
+    margin-top: 0;
+    margin-bottom: 60px;
   }
 
   .review--impress .review__title::after {
@@ -277,8 +279,12 @@ input[name="patronymic"] {
     left: 50%;
   }
 
+  .review--impress .review__label-bold {
+    margin-left: 18px;
+  }
+
   .review--impress .review__label-wrapper {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   .review--contacts,
@@ -294,28 +300,32 @@ input[name="patronymic"] {
   }
 
   input[name="name"] {
-    margin-left: 10px;
-    width: 220px;
+    margin-left: 12px;
+    width: 218px;
   }
 
   input[name="surname"] {
-    margin-left: 10px;
-    width: 182px;
+    margin-left: 12px;
+    width: 180px;
   }
 
   input[name="patronymic"] {
-    margin-left: 12px;
+    margin-left: 14px;
     width: 184px;
   }
 
   .review--contacts {
-    margin-top: 58px;
+    margin-top: 61px;
     padding: 0;
   }
 
   .review--contacts .review__label-normal {
     margin-top: 25px;
     margin-bottom: 0;
+  }
+
+  .review--contacts .review__title {
+    margin-bottom: 28px;
   }
 
   .review--contacts .review__title,
@@ -343,7 +353,6 @@ input[name="patronymic"] {
     flex-wrap: wrap;
     width: 460px;
     margin: 0 auto;
-
   }
 
   .review--sites .review__label-wrapper {
@@ -355,7 +364,7 @@ input[name="patronymic"] {
   }
 
   .review--desc {
-    margin-top: 50px;
+    margin-top: 48px;
     padding: 0;
   }
 
@@ -364,6 +373,7 @@ input[name="patronymic"] {
   }
 
   .review__textarea {
+    padding-top: 15px;
     width: 100%;
   }
 
@@ -377,7 +387,7 @@ input[name="patronymic"] {
   .review__submit {
     width: 324px;
     height: 58px;
-    margin-top: 58px;
+    margin-top: 56px;
     margin-left: 0;
   }
 
@@ -420,7 +430,7 @@ input[name="patronymic"] {
 
   .review--contacts {
     padding: 0;
-    margin-top: 55px;
+    margin-top: 52px;
   }
 
   .review--contacts .review__title {
@@ -436,7 +446,7 @@ input[name="patronymic"] {
     align-items: baseline;
 
     &::after {
-      top: 10px
+      top: 10px;
     }
   }
 
