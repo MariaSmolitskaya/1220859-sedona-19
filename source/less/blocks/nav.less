@@ -80,6 +80,18 @@
   .nav__link {
     color: @black;
     font-size: 14px;
+
+    &:hover {
+      color: @light-blue;
+    }
+
+    &:active {
+      color: lighten(@black, 60%);
+    }
+
+    &:hover:active {
+      color: lighten(@black, 40%);;
+    }
   }
 }
 
