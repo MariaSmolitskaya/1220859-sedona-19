@@ -31,6 +31,9 @@
 }
 
 /*----- Блок личных данных -----*/
+.review--intro {
+  padding-bottom: 5px;
+}
 
 input[name="name"] {
   margin-left: 14px;
@@ -48,8 +51,8 @@ input[name="patronymic"] {
 }
 
 .review--intro .review__title {
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 14px;
+  margin-bottom: 21px;
 }
 
 .review--intro .review__label-normal {
@@ -65,7 +68,7 @@ input[name="patronymic"] {
 }
 
 .review--contacts .review__title {
-  margin-top: 10px;
+  margin-top: 12px;
   margin-bottom: 23px;
 }
 
@@ -87,7 +90,7 @@ input[name="patronymic"] {
 .review--contacts .review__label-normal::after {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 31px;
   right: 0;
   z-index: 1;
   width: 58px;
@@ -164,8 +167,12 @@ input[name="patronymic"] {
 }
 
 /*----- Блок достопримечательности -----*/
+.review--sites {
+  padding-bottom: 1px;
+}
+
 .review--sites .review__title {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 
 .review--sites .review__label-wrapper {
@@ -173,7 +180,7 @@ input[name="patronymic"] {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 }
 
 .review--sites .review__checkbox {
@@ -196,22 +203,23 @@ input[name="patronymic"] {
     background-color: @white-two;
     border-radius: 20%;
   }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 19px;
-    left: 16px;
-    width: 23px;
-    height: 16px;
-    background-image: url("../../img/icon-tick.svg");
-  }
+.review__checkbox:checked ~ .review__label-bold&::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 19px;
+  left: 16px;
+  width: 23px;
+  height: 16px;
+  background-image: url("../../img/icon-tick.svg");
 }
 
 /*----- Блок отзыв -----*/
 .review--desc .review__title {
-  margin-top: 10px;
+  margin-top: 14px;
+  margin-bottom: 17px;
 }
 
 .review__textarea {
@@ -223,7 +231,7 @@ input[name="patronymic"] {
   font-weight: bold;
   background-color: @gray-light;
   border: none;
-  padding-top: 22px;
+  padding-top: 19px;
   padding-left: 21px;
   resize: none;
 }
@@ -232,7 +240,7 @@ input[name="patronymic"] {
   font-family: @ff-primary;
   width: 280px;
   font-size: 21px;
-  margin: 45px 20px 47px;
+  margin: 42px 20px 47px;
 }
 
 .review__note {
