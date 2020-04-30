@@ -28,6 +28,15 @@
   background-color: @gray-light;
   border: none;
   padding-left: 22px;
+
+  &:hover {
+    background-color: darken(@gray-light, 10%);
+  }
+
+  &:focus {
+    background-color: @base-color;
+    border: 5px solid @gray-light;
+  }
 }
 
 /*----- Блок личных данных -----*/
@@ -153,6 +162,14 @@ input[name="patronymic"] {
     border-radius: 50%;
     background-color: @white-two;
   }
+
+  &:active::after {
+    background-color: darken(@white-two, 20%);
+  }
+
+  &:hover::after {
+    background-color: darken(@white-two, 10%);
+  }
 }
 
 .review__radio:checked + .review__label-bold::before {
@@ -164,6 +181,10 @@ input[name="patronymic"] {
   height: 20px;
   border-radius: 50%;
   background-color: @black-two;
+}
+
+.review__radio:checked + .review__label-bold:active::before {
+  opacity: 0.3;
 }
 
 /*----- Блок достопримечательности -----*/
@@ -203,9 +224,17 @@ input[name="patronymic"] {
     background-color: @white-two;
     border-radius: 20%;
   }
+
+  &:hover::after {
+    background-color: darken(@white-two, 10%);
+  }
+
+  &:active::after {
+    background-color: darken(@white-two, 20%);
+  }
 }
 
-.review__checkbox:checked ~ .review__label-bold&::before {
+.review__checkbox:checked ~ .review__label-bold::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -214,6 +243,10 @@ input[name="patronymic"] {
   width: 23px;
   height: 16px;
   background-image: url("../../img/icon-tick.svg");
+}
+
+.review__checkbox:checked ~ .review__label-bold:active::before {
+  opacity: 0.3;
 }
 
 /*----- Блок отзыв -----*/
