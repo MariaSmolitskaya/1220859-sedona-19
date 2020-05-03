@@ -13,7 +13,11 @@
   <nav class="nav">
     <div class="nav__wrapper">
       <ul class="nav__list">
-        <li class="nav__item button-close">х</li>
+        <li class="nav__item button--close">
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0" y="0" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+              <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " fill="white"/>
+            </svg>
+        </li>
         <li class="nav__item">
           <a class="nav__link" href="index.html">Главная</a>
         </li>
@@ -21,7 +25,7 @@
           <a class="nav__link" href="photo.html">Фото и видео</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="form.html">Форма отзыва</a>
+          <a class="nav__link nav__link--active" href="form.html">Форма отзыва</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="#">HTML Academy</a>
@@ -38,7 +42,7 @@
       </picture>
     </a>
     <button class="main-header__nav-toggle" type="button">
-      <img class="main-header__nav-img" src="img/icon-menu.svg" alt="Меню" width="23" height="18">
+      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"/></svg>
     </button>
   </div>
 
@@ -48,6 +52,11 @@
   <div class="main__wrapper">
     <div class="intro intro--small">
       <img class="intro__img" src="img/text-sedona.svg" alt="Пейзаж Седона" width="229" height="39">
+      <picture class="intro__triangle">
+        <source class="reasons__picture" srcset="img/bg-intro-triangle-desktop.svg" media="(min-width: 1200px)">
+        <source class="reasons__picture" srcset="img/bg-intro-triangle-tablet.svg" media="(min-width: 768px)">
+        <img  class="reasons__picture" src="img/bg-intro-triangle-mobile.svg" >
+      </picture>
     </div>
 
     <div class="section section--review">
@@ -72,42 +81,49 @@
       <fieldset class="review__item review--contacts">
         <h2 class="review__title">Контактная информация:</h2>
         <div class="review__wrapper">
-          <label class="review__label-normal">
-            <span class="review__wrapper"><span class="review__hidden">Контактный </span>телефон*:</span><input class="review__input review__input--tel" type="tel" name="phone" value="Введите телефон" required>
+          <label class="review__label-normal review__label--tel">
+            <span class="review__wrapper"><span class="review__hidden">Контактный </span>телефон*:</span><input class="review__input" type="tel" name="phone" value="Введите телефон" required>
           </label>
-          <label class="review__label-normal">
-            Электронная почта*: <input class="review__input review__input--email" type="email" name="email" value="Введите e-mail" required>
+          <label class="review__label-normal review__label--email">
+            <span class="review__wrapper">Электронная почта*: </span><input class="review__input review__input--email" type="email" name="email" value="Введите e-mail" required>
           </label>
         </div>
       </fieldset>
 
       <fieldset class="review__item review--impress">
         <h2 class="review__title">Ваше общее впечатление:</h2>
-        <label class="review__label-bold">
-          <input class="review__radio" type="radio" name="impress" value="positive" checked> Скорее положительное
+        <label class="review__label-wrapper">
+          <input class="review__radio" type="radio" name="impress" value="positive" checked>
+          <span class="review__label-bold">Скорее положительное</span>
         </label>
-        <label class="review__label-bold">
-          <input class="review__radio" type="radio" name="impress" value="negative"> Скорее отрицательное
+        <label class="review__label-wrapper">
+          <input class="review__radio" type="radio" name="impress" value="negative">
+          <span class="review__label-bold">Скорее отрицательное</span>
         </label>
-        <label class="review__label-bold">
-          <input class="review__radio" type="radio" name="impress" value="no-answer"> Затрудняюсь ответить
+        <label class="review__label-wrapper">
+          <input class="review__radio" type="radio" name="impress" value="no-answer">
+          <span class="review__label-bold">Затрудняюсь ответить</span>
         </label>
       </fieldset>
 
       <fieldset class="review__item review--sites">
         <h2 class="review__title">Посещенные достопримечательности:</h2>
         <div class="review__wrapper">
-          <label class="review__label-bold">
-            <input class="review__checkbox" type="checkbox" name="bridge" checked> Мост Дьвола
+          <label class="review__label-wrapper">
+            <input class="review__checkbox" type="checkbox" name="bridge" checked>
+            <span class="review__label-bold">Мост Дьявола</span>
           </label>
-          <label class="review__label-bold">
-            <input class="review__checkbox" type="checkbox" name="mountain" checked> Гора-Колокол
+          <label class="review__label-wrapper">
+            <input class="review__checkbox" type="checkbox" name="mountain" checked>
+            <span class="review__label-bold">Гора-Колокол</span>
           </label>
-          <label class="review__label-bold">
-            <input class="review__checkbox" type="checkbox" name="park" checked> Слайд-парк
+          <label class="review__label-wrapper">
+            <input class="review__checkbox" type="checkbox" name="park" checked>
+            <span class="review__label-bold">Слайд-парк</span>
           </label>
-          <label class="review__label-bold">
-            <input class="review__checkbox" type="checkbox" name="rocks"> Красные скалы
+          <label class="review__label-wrapper">
+            <input class="review__checkbox" type="checkbox" name="rocks">
+            <span class="review__label-bold">Красные скалы</span>
           </label>
         </div>
       </fieldset>
@@ -149,17 +165,17 @@
     <ul class="contacts__list">
       <li class="contacts__item">
         <a class="contacts__link contacts__link--vk" href="#">
-          <img class="contacts__img"  src="img/icon-twitter.svg" alt="Твиттер" width="18" height="15">
+          <svg class="contacts__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="17.5" height="14.66"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.28.15c1.74-.48 3.08.27 3.69 1.15.7-.22 1.37-.47 2.07-.69 0 .84-.54 1.48-.88 1.73.7.17 1.34-.48 1.34-.48a2.9 2.9 0 01-1.61 1.98c-.24 6.59-3.27 10.95-10.38 10.82h-.46c-.43 0-4.3-.45-5.05-1.84 2.34.19 4.01-.42 4.83-1.15-.98-.3-2.76-.47-3.06-2.88.36.1.58.22 1.22.11C1.76 8.07.4 7.37.46 5.22c.3.32 1.1.52 1.38.46C1.12 5.44-.19 2.4.92.84 2.8 2.65 4.77 4.36 8.3 4.53c.22-2.24 1.17-3.74 3-4.38z"/></svg>
         </a>
       </li>
       <li class="contacts__item">
         <a class="contacts__link contacts__link--facebook" href="#">
-          <img class="contacts__img" src="img/icon-facebook.svg" alt="Facebook" width="9" height="19">
+          <svg class="contacts__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="8.672" height="18.944"><path d="M6.275 3.356h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.114H0v3.518h1.959v9.312h3.837V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"/></svg>
         </a>
       </li>
       <li class="contacts__item">
         <a class="contacts__link contacts__link--youtube" href="#">
-          <img class="contacts__img" src="img/icon-youtube.svg" alt="YouTube" width="20" height="14">
+          <svg class="contacts__icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="19.979" height="14.015"><path d="M17.145 0H2.835A2.842 2.842 0 000 2.835v8.345a2.842 2.842 0 002.835 2.835h14.31a2.842 2.842 0 002.835-2.835V2.835A2.844 2.844 0 0017.145 0zM7.036 10.392V3.623l6.769 3.384-6.769 3.385z"/></svg>
         </a>
       </li>
     </ul>
@@ -167,7 +183,7 @@
   <div class="main-footer__copyright copyright">
     <b class="copyright__text">Разработано:</b>
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-      <img class="copyright__img" src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+      <svg class="copyright__icon" xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3h-.2L2 12.1v-9L13.5 2 25 3.1v9zM13.4 6.8L25 13.5l-4.5 2.6-7-4.2v1.4l5.8 3.5-.8.6-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.8 1-1.8 1.2L2 13.6l11.4-6.8zM1.9 15L13.3 22v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.8V17l3.4-2v10l-11.5 6.9-11.6-7v-9.8z"/></svg>
     </a>
   </div>
 </footer>

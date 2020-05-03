@@ -13,6 +13,7 @@
 .review__title {
   font-size: 18px;
   font-weight: bold;
+  line-height: 26px;
   color: @black;
   text-align: center;
 }
@@ -20,15 +21,28 @@
 .review__input {
   box-sizing: border-box;
   height: 58px;
+  font-family: @ff-primary;
   font-size: 18px;
   font-weight: bold;
   color: @black;
   background-color: @gray-light;
   border: none;
   padding-left: 22px;
+
+  &:hover {
+    background-color: darken(@gray-light, 10%);
+  }
+
+  &:focus {
+    background-color: @base-color;
+    border: 5px solid @gray-light;
+  }
 }
 
 /*----- Блок личных данных -----*/
+.review--intro {
+  padding-bottom: 5px;
+}
 
 input[name="name"] {
   margin-left: 14px;
@@ -46,7 +60,8 @@ input[name="patronymic"] {
 }
 
 .review--intro .review__title {
-  margin-bottom: 25px;
+  margin-top: 14px;
+  margin-bottom: 21px;
 }
 
 .review--intro .review__label-normal {
@@ -57,24 +72,74 @@ input[name="patronymic"] {
 
 /*----- Блок контактов -----*/
 
+.review--contacts {
+  margin-bottom: 3px;
+}
+
 .review--contacts .review__title {
-  margin-bottom: 29px;
+  margin-top: 12px;
+  margin-bottom: 23px;
 }
 
 .review--contacts .review__label-normal {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .review--contacts .review__input {
-  margin-top: 14px;
+  margin-top: 10px;
+}
+
+.review__label-normal .review__wrapper {
+  margin-left: 20px;
+}
+
+.review--contacts .review__label-normal::after {
+  content: "";
+  position: absolute;
+  top: 31px;
+  right: 0;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  margin: 0;
+  background-color: @white-three;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.review--contacts .review__label--tel::after {
+  background-image: url("../../img/icon-phone.svg");
+}
+
+.review--contacts .review__label--email::after {
+  background-image: url("../../img/icon-mail.svg");
 }
 
 /*----- Блок впечатления -----*/
+.review--impress {
+  margin-bottom: 9px;
+}
 
 .review--impress .review__title {
-  margin-bottom: 30px;
+  margin-bottom: 23px;
+}
+
+.review--impress .review__label-wrapper {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.review__radio {
+  z-index: -1;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
 }
 
 .review__label-bold {
@@ -82,30 +147,113 @@ input[name="patronymic"] {
   font-weight: bold;
   color: @black;
   text-transform: none;
-  display: flex;
-  align-items: center;
-  margin-top: 14px;
 }
 
-.review__radio {
-  width: 46px;
-  height: 46px;
+.review--impress .review__label-bold {
+  margin-left: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: @white-two;
+  }
+
+  &:active::after {
+    background-color: darken(@white-two, 20%);
+  }
+
+  &:hover::after {
+    background-color: darken(@white-two, 10%);
+  }
+}
+
+.review__radio:checked + .review__label-bold::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  outline: none;
-  border: 0 none;
-  margin-right: 20px;
-  margin-left: 0;
+  background-color: @black-two;
+}
+
+.review__radio:checked + .review__label-bold:active::before {
+  opacity: 0.3;
 }
 
 /*----- Блок достопримечательности -----*/
+.review--sites {
+  padding-bottom: 1px;
+}
 
-.review__checkbox {
-  width: 46px;
-  height: 46px;
-  margin-right: 20px;
+.review--sites .review__title {
+  margin-bottom: 17px;
+}
+
+.review--sites .review__label-wrapper {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.review--sites .review__checkbox {
+  z-index: -1;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.review--sites .review__label-bold {
+  margin-left: 23px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    background-color: @white-two;
+    border-radius: 20%;
+  }
+
+  &:hover::after {
+    background-color: darken(@white-two, 10%);
+  }
+
+  &:active::after {
+    background-color: darken(@white-two, 20%);
+  }
+}
+
+.review__checkbox:checked ~ .review__label-bold::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 19px;
+  left: 16px;
+  width: 23px;
+  height: 16px;
+  background-image: url("../../img/icon-tick.svg");
+}
+
+.review__checkbox:checked ~ .review__label-bold:active::before {
+  opacity: 0.3;
 }
 
 /*----- Блок отзыв -----*/
+.review--desc .review__title {
+  margin-top: 14px;
+  margin-bottom: 17px;
+}
 
 .review__textarea {
   box-sizing: border-box;
@@ -116,15 +264,16 @@ input[name="patronymic"] {
   font-weight: bold;
   background-color: @gray-light;
   border: none;
-  padding-top: 22px;
+  padding-top: 19px;
   padding-left: 21px;
   resize: none;
 }
 
 .review__submit {
+  font-family: @ff-primary;
   width: 280px;
   font-size: 21px;
-  margin: 51px 20px 47px;
+  margin: 42px 20px 47px;
 }
 
 .review__note {
@@ -151,6 +300,16 @@ input[name="patronymic"] {
     margin: 0;
   }
 
+  .review--impress {
+    order: -1;
+    margin-right: 109px;
+  }
+
+  .review--impress .review__title {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
   .review--impress .review__title::after {
     content: "";
     display: inline;
@@ -161,15 +320,12 @@ input[name="patronymic"] {
     left: 50%;
   }
 
-  .review--impress {
-    order: -1;
-    margin-right: 105px;
+  .review--impress .review__label-bold {
+    margin-left: 18px;
   }
 
-  .review--impress .review__title {
-    margin-top: 0;
-    margin-left: -10px;
-    margin-bottom: 60px;
+  .review--impress .review__label-wrapper {
+    margin-bottom: 23px;
   }
 
   .review--contacts,
@@ -178,24 +334,45 @@ input[name="patronymic"] {
     flex-basis: 100%;
   }
 
-  .review__label-bold {
-    margin-top: 30px;
-  }
-
   .review--intro .review__title {
+    text-align: left;
     margin-top: 0;
-    margin-left: -50px;
     margin-bottom: 60px;
   }
 
+  input[name="name"] {
+    margin-left: 12px;
+    padding-top: 15px;
+    padding-bottom: 19px;
+    width: 218px;
+  }
+
+  input[name="surname"] {
+    margin-left: 14px;
+    padding-top: 15px;
+    padding-bottom: 19px;
+    width: 178px;
+  }
+
+  input[name="patronymic"] {
+    margin-left: 17px;
+    padding-top: 15px;
+    padding-bottom: 19px;
+    width: 181px;
+  }
+
   .review--contacts {
-    margin-top: 58px;
+    margin-top: 61px;
     padding: 0;
   }
 
   .review--contacts .review__label-normal {
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 0;
+  }
+
+  .review--contacts .review__title {
+    margin-bottom: 28px;
   }
 
   .review--contacts .review__title,
@@ -214,28 +391,27 @@ input[name="patronymic"] {
   }
 
   .review--sites .review__title {
-    margin-top: -20px;
+    margin-top: -30px;
+    margin-bottom: 40px;
   }
 
   .review--sites .review__wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: 468px;
+    width: 460px;
     margin: 0 auto;
-    justify-content: space-between;
   }
 
-  .review--sites .review__label-bold {
-    flex-basis: 234px;
-  }
+  .review--sites .review__label-wrapper {
+    margin-bottom: 35px;
 
-  .review--sites .review__label-bold:nth-child(2),
-  .review--sites .review__label-bold:nth-child(2) {
-    flex-basis: 200px;
+    &:nth-child(odd) {
+      flex-basis: 56%;
+    }
   }
 
   .review--desc {
-    margin-top: 84px;
+    margin-top: 48px;
     padding: 0;
   }
 
@@ -244,6 +420,7 @@ input[name="patronymic"] {
   }
 
   .review__textarea {
+    padding-top: 15px;
     width: 100%;
   }
 
@@ -257,7 +434,7 @@ input[name="patronymic"] {
   .review__submit {
     width: 324px;
     height: 58px;
-    margin-top: 58px;
+    margin-top: 56px;
     margin-left: 0;
   }
 
@@ -274,7 +451,12 @@ input[name="patronymic"] {
 
   .review--impress {
     flex-basis: 500px;
+    margin-left: 2px;
     margin-right: 59px;
+  }
+
+  .review--impress .review__title {
+    margin-left: -70px;
   }
 
   .review--intro .review__title {
@@ -296,25 +478,43 @@ input[name="patronymic"] {
 
   .review--contacts {
     padding: 0;
+    margin-top: 59px;
+  }
+
+  .review--contacts .review__title {
+    margin-bottom: 40px;
   }
 
   .review--contacts .review__wrapper {
     display: flex;
   }
 
-  .review__input--tel {
-    margin-right: 137px;
-  }
-
-  .review__input--tel,
-  .review__input--email {
-    width: 257px;
-    margin-left: 16px;
-  }
-
   .review--contacts .review__label-normal {
     flex-direction: row;
     align-items: baseline;
+
+    &::after {
+      top: 10px;
+    }
+  }
+
+  .review--contacts .review__input {
+    width: 100%;
+    margin-left: 15px;
+  }
+
+  .review__label-normal .review__wrapper {
+    margin-left: 0;
+    white-space: nowrap;
+  }
+
+  .review__label--tel {
+    width: 400px;
+    margin-right: 80px;
+  }
+
+  .review__label--email {
+    width: 483px;
   }
 
   .review__hidden {
@@ -323,7 +523,12 @@ input[name="patronymic"] {
 
   .review--sites {
     padding: 0;
-    margin-top: 90px;
+    margin-top: 76px;
+  }
+
+  .review--sites .review__title {
+    margin-top: -28px;
+    margin-bottom: 45px;
   }
 
   .review--sites .review__wrapper {
@@ -331,13 +536,16 @@ input[name="patronymic"] {
     justify-content: space-between;
   }
 
+  .review--sites .review__label-wrapper:nth-child(odd) {
+    flex-basis: auto;
+  }
+
   .review--sites .review__label-bold {
-    margin-top: 20px;
     flex-basis: auto;
   }
 
   .review--desc {
-    margin-top: 80px;
+    margin-top: 45px;
   }
 
   .review__submit {

@@ -1,6 +1,6 @@
 .hotels {
   text-align: center;
-  padding-top: 33px;
+  padding-top: 28px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -14,8 +14,12 @@
 
 .hotels__text {
   line-height: 24px;
-  margin-top: 18px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.hotels__text br {
+  display: none;
 }
 
 .hotels__button {
@@ -29,18 +33,18 @@
   text-decoration: none;
   box-sizing: border-box;
   padding-top: 17px;
-  margin-bottom: 68px;
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media (min-width: @tablet-width) {
   .hotels {
-    padding-top: 57px;
+    padding-top: 55px;
   }
 
   .hotels__wrapper {
-    width: 434px;
+    width: 435px;
     margin: 0 auto;
   }
 
@@ -50,11 +54,31 @@
 
   .hotels__text {
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 27px;
+    margin-bottom: 42px;
+  }
+
+  .hotels__text br {
+    display: inline-block;
   }
 
   .hotels__button {
     width: 458px;
     margin-bottom: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hotels {
+    padding-top: 58px;
+  }
+
+  .hotels__button {
+    margin-bottom: 66px;
+  }
+
+  .hotels__text {
+    margin-top: 27px;
+    margin-bottom: 47px;
   }
 }

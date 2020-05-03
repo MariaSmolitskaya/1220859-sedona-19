@@ -7,25 +7,142 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 80px;
+  margin-bottom: 78px;
   width: 280px;
   height: 66px;
   background-color: @gray-light;
+  position: relative;
+}
+
+.video__replay {
+  position: absolute;
+  top: 22px;
+  left: 25px;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.video__subtitles {
+  position: absolute;
+  top: 23px;
+  right: 74px;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.video__fullscreen {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .video__controls {
     width: 648px;
     height: 93px;
-    margin-top: -93px;
-    background-color: rgba(@black, 0.3);
+    margin-top: -92px;
+    margin-bottom: 40px;
+    background-color: rgba(@black, 0.5);
     position: relative;
     z-index: 10;
+  }
+
+  .video__replay {
+    top: 35px;
+    left: 35px;
+    fill: @base-color;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .video__subtitles {
+    top: 36px;
+    right: 92px;
+    fill: @base-color;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .video__fullscreen {
+    top: 36px;
+    right: 41px;
+    fill: @base-color;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .video__scale {
+    width: 389px;
+    height: 3px;
+    opacity: 0.2;
+    background-color: @base-color;
+    position: absolute;
+    top: 45px;
+    left: 93px;
+  }
+
+  .video__slider {
+    width: 11px;
+    height: 10px;
+    background-color: @base-color;
+    border-radius: 50%;
+    position: absolute;
+    top: 41px;
+    left: 205px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .video__controls {
     width: 800px;
+    margin-bottom: 85px;
+  }
+
+  .video__scale {
+    width: 540px;
   }
 }

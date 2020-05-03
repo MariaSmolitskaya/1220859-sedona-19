@@ -1,4 +1,28 @@
+.map {
+  position: relative;
+}
+
 .map__img {
   display: block;
   margin: 0 auto;
+}
+
+.map__marker {
+  position: absolute;
+  top: 161px;
+  left: 146px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__marker {
+    top: 164px;
+    left: 370px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__marker {
+    top: 162px;
+    left: 586px;
+  }
 }

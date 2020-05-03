@@ -13,4 +13,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    background-color: darken(@light-blue, 10%);
+  }
+}
+
+.contacts__item:nth-child(2) {
+  width: 47px;
+}
+
+.contacts__item:last-child {
+  margin-right: 0;
+}
+
+.contacts__icon {
+  fill: @base-color;
+  vertical-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__item:first-child {
+    margin-left: -8px;
+  }
 }

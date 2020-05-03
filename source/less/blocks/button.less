@@ -8,4 +8,18 @@
   font-weight: bold;
   border: none;
   margin: 0 auto;
+
+  &:hover {
+    background-color: darken(@light-blue, 10%);
+  }
+
+  &:active {
+    background-color: darken(@light-blue, 15%);
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: @white-four;
+    color: desaturate(@base-color, 80%);
+  }
 }

@@ -1,18 +1,33 @@
 .advantages__list {
   width: 210px;
   padding: 0;
-  margin: 41px auto 42px;
+  margin: 35px 41px 37px 69px;
   list-style: none;
 }
 
 .advantages__item {
-  margin-bottom: 39px;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .advantages__title {
   font-size: 18px;
   line-height: 26px;
   color: @black;
+  margin: 0;
+}
+
+.advantages__icon {
+  width: 37px;
+  height: 36px;
+  fill: @light-blue;
+  position: absolute;
+  left: -49px;
+  top: -8px;
+}
+
+.advantages__description br {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -20,6 +35,21 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin: 158px 41px 18px 0;
+  }
+
+  .advantages__title {
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+
+  .advantages__icon {
+    width: 75px;
+    height: 72px;
+    top: -99px;
+    left: 50%;
+    margin-left: -37.5px;
   }
 
   .advantages__item {
@@ -27,16 +57,61 @@
   }
 
   .advantages__item--home {
-    margin-left: 51px;
-    margin-right: 103px;
+    width: 156px;
+    margin-left: 40px;
+    margin-right: 85px;
   }
 
   .advantages__item--souvenirs {
     order: 1;
-    margin-right: 46px;
+    margin-right: 35px;
+  }
+
+  .advantages__item--souvenirs .advantages__description {
+    width: 173px;
   }
 
   .advantages__item--food {
-    margin-right: 100px;
+    margin-right: 75px;
+  }
+
+  .advantages__item--food .advantages__description {
+    width: 153px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item--home {
+    width: 252px;
+    margin-left: 45px;
+    margin-right: 75px;
+  }
+
+  .advantages__description br {
+    display: inline-block;
+  }
+
+  .advantages__item--home .advantages__description {
+    width: 252px;
+  }
+
+  .advantages__item--food {
+    margin-right: 95px;
+  }
+
+  .advantages__item--food .advantages__description {
+    width: 283px;
+  }
+
+  .advantages__item--souvenirs {
+    margin-right: 60px;
+  }
+
+  .advantages__item--souvenirs .advantages__description {
+    width: 215px;
+  }
+
+  .advantages__list {
+    margin-bottom: 39px;
   }
 }

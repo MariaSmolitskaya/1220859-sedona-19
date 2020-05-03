@@ -9,31 +9,50 @@
 
 .section__text {
   line-height: 24px;
-  margin-top: 34px;
+  margin-top: 30px;
 }
 
 .section--photo {
-  padding: 44px 24px 33px 27px;
+  padding: 29px 23px 10px 25px;
 }
 
 .section--video {
-  padding: 39px 41px 40px 43px;
+  padding: 35px 41px 18px 43px;
+}
+
+.section--video .section__text {
+  margin-top: 29px;
 }
 
 .section--review {
-  padding: 41px 21px 22px 23px;
+  padding: 29px 21px 0 23px;
+}
+
+.section--review .section__text {
+  margin-top: 29px;
+  margin-bottom: 16px;
 }
 
 @media (min-width: @tablet-width) {
+  .section--photo {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
   .section--photo .section__wrapper {
     width: 428px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: 142px;
   }
 
   .section--review {
     width: 439px;
     padding: 0;
-    margin: 71px auto 74px;
+    margin: 75px auto 74px 161px;
+  }
+
+  .section--review .section__text {
+    margin-top: 30px;
   }
 
   .section__title {
@@ -46,12 +65,40 @@
   }
 
   .section--video {
-    padding: 68px 177px 78px 176px;
+    padding: 68px 177px 59px 176px;
+  }
+
+  .section--video .section__text {
+    margin-top: 25px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .section--review {
-    margin: 108px auto 60px;
+    margin: 111px auto 60px;
+  }
+
+  .section--review .section__text {
+    margin-bottom: 30px;
+  }
+
+  .section--photo {
+    padding-top: 90px;
+    padding-bottom: 57px;
+  }
+
+  .section--photo .section__text {
+    margin-top: 32px;
+  }
+
+  .section--photo .section__wrapper {
+    margin-left: 358px;
+  }
+
+  .section--video {
+    width: 415px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 55px;
   }
 }
