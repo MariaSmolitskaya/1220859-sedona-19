@@ -9,17 +9,7 @@
   </head>
   <body>
 
-  <svg style="display:none">
-    <symbol viewBox="0 0 17.5 14.663" id="icon-twitter">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.28.15c1.74-.48 3.08.27 3.69 1.15.7-.22 1.37-.47 2.07-.69 0 .84-.54 1.48-.88 1.73.7.17 1.34-.48 1.34-.48a2.9 2.9 0 01-1.61 1.98c-.24 6.59-3.27 10.95-10.38 10.82h-.46c-.43 0-4.3-.45-5.05-1.84 2.34.19 4.01-.42 4.83-1.15-.98-.3-2.76-.47-3.06-2.88.36.1.58.22 1.22.11C1.76 8.07.4 7.37.46 5.22c.3.32 1.1.52 1.38.46C1.12 5.44-.19 2.4.92.84 2.8 2.65 4.77 4.36 8.3 4.53c.22-2.24 1.17-3.74 3-4.38z"/>
-    </symbol>
-    <symbol viewBox="0 0 8.672 18.944" id="icon-facebook">
-      <path d="M6.275 3.356h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.114H0v3.518h1.959v9.312h3.837V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"/>
-    </symbol>
-    <symbol viewBox="0 0 19.979 14.015" id="icon-youtube">
-      <path d="M17.145 0H2.835A2.842 2.842 0 000 2.835v8.345a2.842 2.842 0 002.835 2.835h14.31a2.842 2.842 0 002.835-2.835V2.835A2.844 2.844 0 0017.145 0zM7.036 10.392V3.623l6.769 3.384-6.769 3.385z"/>
-    </symbol>
-  </svg>
+  <object type="image/svg+xml" data="img/sprite.svg"></object>
 
   <header class="main-header">
 
@@ -50,7 +40,8 @@
     <div class="main-header__wrapper">
       <a class="main-header__logo">
         <picture>
-          <source class="main-header__logo-img" srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+          <source class="main-header__logo-img" media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source class="main-header__logo-img" media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
           <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona">
         </picture>
       </a>
@@ -68,7 +59,7 @@
       <picture class="intro__triangle">
         <source class="reasons__picture" srcset="img/bg-intro-triangle-desktop.svg" media="(min-width: 1200px)">
         <source class="reasons__picture" srcset="img/bg-intro-triangle-tablet.svg" media="(min-width: 768px)">
-        <img class="reasons__picture" src="img/bg-intro-triangle-mobile.svg">
+        <img class="reasons__picture" src="img/bg-intro-triangle-mobile.svg" alt="Декоративный элемент">
       </picture>
     </div>
 
@@ -88,9 +79,9 @@
         </div>
         <div class="reasons__img">
           <picture>
-            <source class="img" srcset="img/main-city-desktop@1x.jpg" media="(min-width: 1200px)">
-            <source class="img" srcset="img/main-city-tablet@1x.jpg" media="(min-width: 768px)">
-            <img class="img" src="img/main-city-mobile@1x.jpg" alt="Домик в Седоне">
+            <source class="img" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg, img/main-city-desktop@2x.jpg">
+            <source class="img" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg, img/main-city-tablet@2x.jpg">
+            <img class="img" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Домик в Седоне">
           </picture>
         </div>
       </div>
@@ -98,42 +89,17 @@
       <section class="advantages">
         <ul class="advantages__list">
             <li class="advantages__item advantages__item--home">
-              <svg class="advantages__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="74.695px" height="72.346px" viewBox="0 0 74.695 72.346" enable-background="new 0 0 74.695 72.346" xml:space="preserve">
-                <g>
-                  <path d="M29.503,65.345h16V41.407h-16V65.345z M42.566,62.407H32.441V44.345h10.125V62.407z"/>
-                  <path d="M72.62,39.44l2.075-2.078l-9.907-9.913V0.47H50.974v13.161L37.349,0L0,37.363l2.077,2.078l7.832-7.832v37.799H5.971v2.938 h63.875v-2.938h-5.059v-37.8L72.62,39.44z M53.913,3.408h7.938v21.104l-7.938-7.94V3.408z M61.85,69.407H12.846V28.671 L37.348,4.169L61.85,28.671V69.407z"/>
-                  <path d="M29.753,27.21c0,4.28,3.47,7.75,7.75,7.75s7.75-3.47,7.75-7.75c0-4.279-3.47-7.75-7.75-7.75S29.753,22.93,29.753,27.21z M37.503,22.241c2.745,0,4.97,2.225,4.97,4.97s-2.225,4.971-4.97,4.971s-4.97-2.226-4.97-4.971S34.759,22.241,37.503,22.241z"/>
-                  <rect x="16.909" y="41.407" width="3" height="3.938"/>
-                  <rect x="22.846" y="41.407" width="3" height="3.938"/>
-                  <rect x="16.909" y="47.407" width="3" height="3.938"/>
-                  <rect x="22.846" y="47.407" width="3" height="3.938"/>
-                  <rect x="48.846" y="41.407" width="3" height="3.938"/>
-                  <rect x="54.784" y="41.407" width="3" height="3.938"/>
-                  <rect x="48.846" y="47.407" width="3" height="3.938"/>
-                  <rect x="54.784" y="47.407" width="3" height="3.938"/>
-                </g>
-              </svg>
+              <svg class="advantages__icon" width="74.695px" height="72.346px"><use xlink:href="img/sprite.svg#icon-home"></use></svg>
               <h2 class="advantages__title">Жилье</h2>
               <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li class="advantages__item advantages__item--souvenirs">
-              <svg class="advantages__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="63px" height="75.084px" viewBox="0 0 63 75.084" enable-background="new 0 0 63 75.084" xml:space="preserve">
-                <path d="M60.165,22.23h-0.103H35.758c13.604-6.815,14.688-11.115,14.188-13.52c-1.145-3.916-5.604-6.938-9.848-5.341 c-5.484,2.063-7.029,10.262-8.514,16.19C29.69,13.561,27.858,5.91,23.573,2.034c-1.242-1.125-3.049-2.237-5.676-2.003 c-3.965,0.352-9.652,5.317-7.344,10.849c2.217,5.313,9.539,8.67,14.354,11.35H2.834C1.275,22.23,0,23.506,0,25.065V36.25 c0,1.559,1.275,2.834,2.835,2.834h0.27v35.999h56.958V39.084h0.104c1.561,0,2.835-1.275,2.835-2.834V25.065 C63,23.506,61.725,22.23,60.165,22.23z M41.766,5.873c2.07-0.306,4.907,1.283,5.176,3.171c0.386,2.723-3.349,5.192-5.008,6.343 c-2.484,1.723-4.853,2.611-7.178,4.006C35.628,15.748,37.268,6.539,41.766,5.873z M19.232,15.721 c-2.19-1.467-6.444-4.378-6.342-7.678c0.11-3.552,5.655-6.491,8.68-3.839c3.797,3.331,5.625,10.972,7.01,16.357 C25.381,19.042,22.35,17.808,19.232,15.721z M25.114,72.147H6.042V39.084h19.072V72.147z M25.114,36.084H3V25.23h22.114V36.084z  M35.115,72.146h-7.063V25.23h7.063V72.146z M57.125,72.147H38.053V39.084h19.072V72.147z M60,36.084H38.053V25.23H60V36.084z"/>
-              </svg>
+              <svg class="advantages__icon" width="63px" height="75.084px"><use xlink:href="img/sprite.svg#icon-souvenirs"></use></svg>
               <h2 class="advantages__title">Сувениры</h2>
               <p class="advantages__description">Не только китайского,<br> но и местного производства!</p>
             </li>
             <li class="advantages__item advantages__item--food">
-              <svg class="advantages__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="76.166px" height="68.959px" viewBox="0 0 76.166 68.959" enable-background="new 0 0 76.166 68.959" xml:space="preserve">
-                <g>
-                  <path d="M71.914,46.042H4.252C1.914,46.042,0,47.955,0,50.294v3.454C0,56.086,1.914,58,4.252,58h0.956v1.037 c0,5.457,4.464,9.922,9.921,9.922h45.908c5.456,0,9.921-4.465,9.921-9.922V58h0.956c2.339,0,4.252-1.914,4.252-4.252v-3.454 C76.166,47.955,74.253,46.042,71.914,46.042z M67.958,59.037c0,3.815-3.104,6.922-6.921,6.922H15.129 c-3.816,0-6.921-3.104-6.921-6.922V58h59.75V59.037z M73.166,53.748c0,0.679-0.573,1.252-1.252,1.252H4.252 C3.573,55,3,54.427,3,53.748v-3.454c0-0.679,0.573-1.252,1.252-1.252h67.662c0.679,0,1.252,0.573,1.252,1.252V53.748z"/>
-                  <polygon points="16.162,37.856 21.635,41.856 27.112,37.856 32.591,41.856 38.069,37.856 43.548,41.856 49.026,37.856 54.505,41.856 59.985,37.856 65.474,41.856 71.842,37.212 70.074,34.788 65.474,38.144 59.985,34.144 54.505,38.144 49.026,34.143 43.548,38.144 38.069,34.143 32.591,38.144 27.112,34.143 21.636,38.144 16.163,34.142 10.686,38.144 6.093,34.789 4.323,37.211 10.686,41.856 	"/>
-                  <path d="M70.888,31.094c0.041-0.61,0.055-2.616,0.037-3C70.242,12.476,55.804,0,38.083,0C20.363,0,5.924,12.476,5.241,28.094 c-0.017,0.384-0.004,2.389,0.039,3H70.888z M38.083,3c16.031,0,29.15,11.154,29.842,25.094H8.241C8.933,14.154,22.051,3,38.083,3z"/>
-                  <circle cx="38.083" cy="15.042" r="2"/>
-                  <circle cx="30.083" cy="10.083" r="2"/>
-                  <circle cx="46.083" cy="10.083" r="2"/>
-                </g>
-              </svg>
+              <svg class="advantages__icon" width="76.166px" height="68.959px"><use xlink:href="img/sprite.svg#icon-burger"></use></svg>
               <h2 class="advantages__title">Еда</h2>
               <p class="advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
@@ -149,9 +115,9 @@
 
       <div class="reasons__img reasons__img--bridge">
         <picture>
-          <source class="img" srcset="img/main-bridge-desktop@1x.jpg" media="(min-width: 1200px)">
-          <source class="img" srcset="img/main-bridge-tablet@1x.jpg" media="(min-width: 768px)">
-          <img class="img" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола">
+          <source class="img" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg, img/main-bridge-desktop@2x.jpg">
+          <source class="img" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg, img/main-bridge-tablet@2x.jpg">
+          <img class="img" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
         </picture>
       </div>
     </div>
@@ -187,7 +153,7 @@
     </div>
 
     <div class="map">
-      <img class="map__marker" src="img/icon-map-marker.svg" width="27" height="27">
+      <img class="map__marker" src="img/icon-map-marker.svg" width="27" height="27" alt="Указатель на карте">
     </div>
     </div>
   </main>
@@ -198,17 +164,17 @@
       <ul class="contacts__list">
         <li class="contacts__item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__icon" width="17.5" height="14.66"><use xlink:href="#icon-twitter"></use></svg>
+            <svg class="contacts__icon" width="17.5" height="14.66"><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
           </a>
         </li>
         <li class="contacts__item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__icon" width="8.672" height="18.944"><use xlink:href="#icon-facebook"></use></svg>
+            <svg class="contacts__icon" width="8.672" height="18.944"><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
           </a>
         </li>
         <li class="contacts__item">
           <a class="contacts__link" href="#">
-            <svg class="contacts__icon" width="19.979" height="14.015"><use xlink:href="#icon-youtube"></use></svg>
+            <svg class="contacts__icon" width="19.979" height="14.015"><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
           </a>
         </li>
       </ul>
@@ -216,7 +182,7 @@
     <div class="main-footer__copyright copyright">
       <b class="copyright__text">Разработано:</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="copyright__icon" xmlns="http://www.w3.org/2000/svg" width="26.9" height="34.1"><path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0zM25 12.1L13.5 5.3h-.2L2 12.1v-9L13.5 2 25 3.1v9zM13.4 6.8L25 13.5l-4.5 2.6-7-4.2v1.4l5.8 3.5-.8.6-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.8 1-1.8 1.2L2 13.6l11.4-6.8zM1.9 15L13.3 22v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.2-4.8V17l3.4-2v10l-11.5 6.9-11.6-7v-9.8z"/></svg>
+        <svg class="copyright__icon" width="26.9" height="34.1"><use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
       </a>
     </div>
   </footer>
