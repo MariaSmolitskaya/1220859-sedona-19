@@ -11,14 +11,18 @@
 </head>
 <body>
 
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+
 <header class="main-header">
 
   <nav class="nav">
     <div class="nav__wrapper">
       <ul class="nav__list">
         <li class="nav__item button--close">
-          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0" y="0" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
-              <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " fill="white"/>
+          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
+              <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " fill="white"></polygon>
             </svg>
         </li>
         <li class="nav__item">
@@ -45,7 +49,7 @@
       </picture>
     </a>
     <button class="main-header__nav-toggle" type="button">
-      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"/></svg>
+      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982"><path d="M0 0h22.928v3.964H0zM0 9.009h22.928v3.964H0zM0 18.018h22.928v3.964H0z"></path></svg>
     </button>
   </div>
 
@@ -66,10 +70,10 @@
       <fieldset class="review__item review--intro">
         <h2 class="review__title">Представьтесь:</h2>
         <label class="review__label-normal">
-          Имя*: <input class="review__input" type="text" name="name" value="Петр" required>
+          Имя*: <input class="review__input" type="text" name="name" value="Петр" required="">
         </label>
         <label class="review__label-normal">
-          Фамилия*: <input class="review__input" type="text" name="surname" value="Иванов" required>
+          Фамилия*: <input class="review__input" type="text" name="surname" value="Иванов" required="">
         </label>
         <label class="review__label-normal">
           Отчество: <input class="review__input" type="text" name="patronymic" value="Алексадрович">
@@ -80,10 +84,10 @@
         <h2 class="review__title">Контактная информация:</h2>
         <div class="review__wrapper">
           <label class="review__label-normal review__label--tel">
-            <span class="review__wrapper"><span class="review__hidden">Контактный </span>телефон*:</span><input class="review__input" type="tel" name="phone" value="Введите телефон" required>
+            <span class="review__wrapper"><span class="review__hidden">Контактный </span>телефон*:</span><input class="review__input" type="tel" name="phone" value="Введите телефон" required="">
           </label>
           <label class="review__label-normal review__label--email">
-            <span class="review__wrapper">Электронная почта*: </span><input class="review__input review__input--email" type="email" name="email" value="Введите e-mail" required>
+            <span class="review__wrapper">Электронная почта*: </span><input class="review__input review__input--email" type="email" name="email" value="Введите e-mail" required="">
           </label>
         </div>
       </fieldset>
@@ -91,7 +95,7 @@
       <fieldset class="review__item review--impress">
         <h2 class="review__title">Ваше общее впечатление:</h2>
         <label class="review__label-wrapper">
-          <input class="review__radio" type="radio" name="impress" value="positive" checked>
+          <input class="review__radio" type="radio" name="impress" value="positive" checked="">
           <span class="review__label-bold">Скорее положительное</span>
         </label>
         <label class="review__label-wrapper">
@@ -108,15 +112,15 @@
         <h2 class="review__title">Посещенные достопримечательности:</h2>
         <div class="review__wrapper">
           <label class="review__label-wrapper">
-            <input class="review__checkbox" type="checkbox" name="bridge" checked>
+            <input class="review__checkbox" type="checkbox" name="bridge" checked="">
             <span class="review__label-bold">Мост Дьявола</span>
           </label>
           <label class="review__label-wrapper">
-            <input class="review__checkbox" type="checkbox" name="mountain" checked>
+            <input class="review__checkbox" type="checkbox" name="mountain" checked="">
             <span class="review__label-bold">Гора-Колокол</span>
           </label>
           <label class="review__label-wrapper">
-            <input class="review__checkbox" type="checkbox" name="park" checked>
+            <input class="review__checkbox" type="checkbox" name="park" checked="">
             <span class="review__label-bold">Слайд-парк</span>
           </label>
           <label class="review__label-wrapper">
@@ -131,7 +135,7 @@
         <textarea class="review__textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
       </fieldset>
 
-      <div class="review__button" >
+      <div class="review__button">
         <input class="review__submit button" type="submit" value="Отправить отзыв">
         <span class="review__note">* — обязательные поля</span>
       </div>
