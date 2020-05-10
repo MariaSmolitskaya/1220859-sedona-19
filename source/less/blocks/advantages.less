@@ -17,13 +17,33 @@
   margin: 0;
 }
 
-.advantages__icon {
+.advantages__item--home::before,
+.advantages__item--souvenirs::before,
+.advantages__item--food::before {
+  content: "";
   width: 37px;
   height: 36px;
-  fill: @light-blue;
   position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--home::before {
+  background-image: url("../../img/icon-house.svg");
   left: -49px;
   top: -8px;
+}
+
+.advantages__item--souvenirs::before {
+  background-image: url("../../img/icon-gift.svg");
+  top: -8px;
+  left: -45px;
+}
+
+.advantages__item--food::before {
+  background-image: url("../../img/icon-burger.svg");
+  top: -5px;
+  left: -50px;
 }
 
 .advantages__description br {
@@ -44,14 +64,6 @@
     margin-bottom: 24px;
   }
 
-  .advantages__icon {
-    width: 75px;
-    height: 72px;
-    top: -99px;
-    left: 50%;
-    margin-left: -37.5px;
-  }
-
   .advantages__item {
     text-align: center;
   }
@@ -60,6 +72,7 @@
     width: 156px;
     margin-left: 40px;
     margin-right: 85px;
+    position: relative;
   }
 
   .advantages__item--souvenirs {
@@ -77,6 +90,30 @@
 
   .advantages__item--food .advantages__description {
     width: 153px;
+  }
+
+  .advantages__item--home::before {
+    width: 75px;
+    height: 72px;
+    top: -99px;
+    left: 50%;
+    margin-left: -37.5px;
+  }
+
+  .advantages__item--food::before {
+    width: 76px;
+    height: 69px;
+    top: -96px;
+    left: 50%;
+    margin-left: -37.5px;
+  }
+
+  .advantages__item--souvenirs::before {
+    width: 63px;
+    height: 75px;
+    top: -99px;
+    left: 50%;
+    margin-left: -31.5px;
   }
 }
 

@@ -6,7 +6,6 @@
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
 }
 
@@ -40,7 +39,7 @@
 }
 
 /*----- Блок личных данных -----*/
-.review--intro {
+.review__item--intro {
   padding-bottom: 5px;
 }
 
@@ -59,12 +58,12 @@ input[name="patronymic"] {
   width: 194px;
 }
 
-.review--intro .review__title {
+.review__item--intro .review__title {
   margin-top: 14px;
   margin-bottom: 21px;
 }
 
-.review--intro .review__label-normal {
+.review__item--intro .review__label--normal {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -72,31 +71,31 @@ input[name="patronymic"] {
 
 /*----- Блок контактов -----*/
 
-.review--contacts {
+.review__item--contacts {
   margin-bottom: 3px;
 }
 
-.review--contacts .review__title {
+.review__item--contacts .review__title {
   margin-top: 12px;
   margin-bottom: 23px;
 }
 
-.review--contacts .review__label-normal {
+.review__item--contacts .review__label--normal {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
   position: relative;
 }
 
-.review--contacts .review__input {
+.review__item--contacts .review__input {
   margin-top: 10px;
 }
 
-.review__label-normal .review__wrapper {
+.review__label--normal .review__wrapper {
   margin-left: 20px;
 }
 
-.review--contacts .review__label-normal::after {
+.review__item--contacts .review__label--normal::after {
   content: "";
   position: absolute;
   top: 31px;
@@ -110,24 +109,24 @@ input[name="patronymic"] {
   background-position: center;
 }
 
-.review--contacts .review__label--tel::after {
+.review__item--contacts .review__label--tel::after {
   background-image: url("../../img/icon-phone.svg");
 }
 
-.review--contacts .review__label--email::after {
+.review__item--contacts .review__label--email::after {
   background-image: url("../../img/icon-mail.svg");
 }
 
 /*----- Блок впечатления -----*/
-.review--impress {
+.review__item--impress {
   margin-bottom: 9px;
 }
 
-.review--impress .review__title {
+.review__item--impress .review__title {
   margin-bottom: 23px;
 }
 
-.review--impress .review__label-wrapper {
+.review__item--impress .review__label-wrapper {
   height: 55px;
   display: flex;
   align-items: center;
@@ -142,14 +141,14 @@ input[name="patronymic"] {
   height: 50px;
 }
 
-.review__label-bold {
+.review__label--bold {
   font-size: 18px;
   font-weight: bold;
   color: @black;
   text-transform: none;
 }
 
-.review--impress .review__label-bold {
+.review__item--impress .review__label--bold {
   margin-left: 20px;
 
   &::after {
@@ -172,7 +171,7 @@ input[name="patronymic"] {
   }
 }
 
-.review__radio:checked + .review__label-bold::before {
+.review__radio:checked + .review__label--bold::before {
   content: "";
   position: absolute;
   z-index: 2;
@@ -183,20 +182,20 @@ input[name="patronymic"] {
   background-color: @black-two;
 }
 
-.review__radio:checked + .review__label-bold:active::before {
+.review__radio:checked + .review__label--bold:active::before {
   opacity: 0.3;
 }
 
 /*----- Блок достопримечательности -----*/
-.review--sites {
+.review__item--sites {
   padding-bottom: 1px;
 }
 
-.review--sites .review__title {
+.review__item--sites .review__title {
   margin-bottom: 17px;
 }
 
-.review--sites .review__label-wrapper {
+.review__item--sites .review__label-wrapper {
   height: 55px;
   display: flex;
   align-items: center;
@@ -204,14 +203,14 @@ input[name="patronymic"] {
   margin-bottom: 25px;
 }
 
-.review--sites .review__checkbox {
+.review__item--sites .review__checkbox {
   z-index: -1;
   opacity: 0;
   width: 50px;
   height: 50px;
 }
 
-.review--sites .review__label-bold {
+.review__item--sites .review__label--bold {
   margin-left: 23px;
 
   &::after {
@@ -234,7 +233,7 @@ input[name="patronymic"] {
   }
 }
 
-.review__checkbox:checked ~ .review__label-bold::before {
+.review__checkbox:checked ~ .review__label--bold::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -245,12 +244,12 @@ input[name="patronymic"] {
   background-image: url("../../img/icon-tick.svg");
 }
 
-.review__checkbox:checked ~ .review__label-bold:active::before {
+.review__checkbox:checked ~ .review__label--bold:active::before {
   opacity: 0.3;
 }
 
 /*----- Блок отзыв -----*/
-.review--desc .review__title {
+.review__items--desc .review__title {
   margin-top: 14px;
   margin-bottom: 17px;
 }
@@ -293,24 +292,24 @@ input[name="patronymic"] {
     line-height: 26px;
   }
 
-  .review--impress,
-  .review--intro {
+  .review__item--impress,
+  .review__item--intro {
     border-top: 0 none;
     padding: 0;
     margin: 0;
   }
 
-  .review--impress {
+  .review__item--impress {
     order: -1;
     margin-right: 109px;
   }
 
-  .review--impress .review__title {
+  .review__item--impress .review__title {
     margin-top: 0;
     margin-bottom: 60px;
   }
 
-  .review--impress .review__title::after {
+  .review__item--impress .review__title::after {
     content: "";
     display: inline;
     width: 1px;
@@ -320,21 +319,21 @@ input[name="patronymic"] {
     left: 50%;
   }
 
-  .review--impress .review__label-bold {
+  .review__item--impress .review__label--bold {
     margin-left: 18px;
   }
 
-  .review--impress .review__label-wrapper {
+  .review__item--impress .review__label-wrapper {
     margin-bottom: 23px;
   }
 
-  .review--contacts,
-  .review--sites,
-  .review--desc {
+  .review__item--contacts,
+  .review__item--sites,
+  .review__item--desc {
     flex-basis: 100%;
   }
 
-  .review--intro .review__title {
+  .review__item--intro .review__title {
     text-align: left;
     margin-top: 0;
     margin-bottom: 60px;
@@ -361,23 +360,23 @@ input[name="patronymic"] {
     width: 181px;
   }
 
-  .review--contacts {
+  .review__item--contacts {
     margin-top: 61px;
     padding: 0;
   }
 
-  .review--contacts .review__label-normal {
+  .review__item--contacts .review__label--normal {
     margin-top: 25px;
     margin-bottom: 0;
   }
 
-  .review--contacts .review__title {
+  .review__item--contacts .review__title {
     margin-bottom: 28px;
   }
 
-  .review--contacts .review__title,
-  .review--sites .review__title,
-  .review--desc .review__title {
+  .review__item--contacts .review__title,
+  .review__item--sites .review__title,
+  .review__item--desc .review__title {
     width: 396px;
     margin-left: auto;
     margin-right: auto;
@@ -385,24 +384,24 @@ input[name="patronymic"] {
     background-color: @base-color;
   }
 
-  .review--sites {
+  .review__item--sites {
     margin-top: 75px;
     padding-bottom: 0;
   }
 
-  .review--sites .review__title {
+  .review__item--sites .review__title {
     margin-top: -30px;
     margin-bottom: 40px;
   }
 
-  .review--sites .review__wrapper {
+  .review__item--sites .review__wrapper {
     display: flex;
     flex-wrap: wrap;
     width: 460px;
     margin: 0 auto;
   }
 
-  .review--sites .review__label-wrapper {
+  .review__item--sites .review__label-wrapper {
     margin-bottom: 35px;
 
     &:nth-child(odd) {
@@ -410,12 +409,12 @@ input[name="patronymic"] {
     }
   }
 
-  .review--desc {
+  .review__item--desc {
     margin-top: 48px;
     padding: 0;
   }
 
-  .review--desc .review__title {
+  .review__item--desc .review__title {
     margin-bottom: 60px;
   }
 
@@ -449,17 +448,17 @@ input[name="patronymic"] {
     padding-right: 120px;
   }
 
-  .review--impress {
+  .review__item--impress {
     flex-basis: 500px;
     margin-left: 4px;
     margin-right: 55px;
   }
 
-  .review--impress .review__title {
+  .review__item--impress .review__title {
     margin-left: -75px;
   }
 
-  .review--intro .review__title {
+  .review__item--intro .review__title {
     text-align: left;
     margin-left: 0;
   }
@@ -476,20 +475,20 @@ input[name="patronymic"] {
     width: 314px;
   }
 
-  .review--contacts {
+  .review__item--contacts {
     padding: 0;
     margin-top: 59px;
   }
 
-  .review--contacts .review__title {
+  .review__item--contacts .review__title {
     margin-bottom: 40px;
   }
 
-  .review--contacts .review__wrapper {
+  .review__item--contacts .review__wrapper {
     display: flex;
   }
 
-  .review--contacts .review__label-normal {
+  .review--contacts .review__label--normal {
     flex-direction: row;
     align-items: baseline;
 
@@ -498,12 +497,12 @@ input[name="patronymic"] {
     }
   }
 
-  .review--contacts .review__input {
+  .review__item--contacts .review__input {
     width: 100%;
     margin-left: 15px;
   }
 
-  .review__label-normal .review__wrapper {
+  .review__label--normal .review__wrapper {
     margin-left: 0;
     white-space: nowrap;
   }
@@ -521,30 +520,30 @@ input[name="patronymic"] {
     display: none;
   }
 
-  .review--sites {
+  .review__item--sites {
     padding: 0;
     margin-top: 76px;
   }
 
-  .review--sites .review__title {
+  .review__item--sites .review__title {
     margin-top: -28px;
     margin-bottom: 45px;
   }
 
-  .review--sites .review__wrapper {
+  .review__item--sites .review__wrapper {
     width: 100%;
     justify-content: space-between;
   }
 
-  .review--sites .review__label-wrapper:nth-child(odd) {
+  .review__item--sites .review__label-wrapper:nth-child(odd) {
     flex-basis: auto;
   }
 
-  .review--sites .review__label-bold {
+  .review__item--sites .review__label--bold {
     flex-basis: auto;
   }
 
-  .review--desc {
+  .review__item--desc {
     margin-top: 45px;
   }
 
