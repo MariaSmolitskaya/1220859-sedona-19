@@ -20,7 +20,7 @@
     <nav class="nav">
       <div class="nav__wrapper">
         <ul class="nav__list">
-          <li class="nav__item button--close">
+          <li class="nav__item nav__item--close">
             <svg class="nav__icon-cross" xmlns="http://www.w3.org/2000/svg" width="22.2" height="22.2"><path d="M22.2 2.8L19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3z"/></svg>
           </li>
           <li class="nav__item">
@@ -44,7 +44,7 @@
         <picture>
           <source class="main-header__logo-img" media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
           <source class="main-header__logo-img" media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona">
+          <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona" width="102" height="84">
         </picture>
       </a>
       <button class="main-header__nav-toggle" type="button">
@@ -71,7 +71,6 @@
       <div class="reasons reasons--first">
         <div class="reasons__item reasons__item--blue">
           <b class="reasons__title">Настоящий <br>городок</b>
-          <p class="reasons__number">— №1 —</p>
           <p class="reasons__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
         </div>
         <div class="reasons__img">
@@ -82,7 +81,7 @@
 
             <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
-            <img class="reasons__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Домик в Седоне">
+            <img class="reasons__picture" src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" alt="Домик в Седоне" width="320" height="260">
           </picture>
         </div>
       </div>
@@ -90,17 +89,14 @@
       <section class="advantages">
         <ul class="advantages__list">
             <li class="advantages__item advantages__item--home">
-              <svg class="advantages__icon" width="74.695px" height="72.346px"><use xlink:href="img/sprite.svg#icon-house"></use></svg>
               <h2 class="advantages__title">Жилье</h2>
               <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li class="advantages__item advantages__item--souvenirs">
-              <svg class="advantages__icon" width="63px" height="75.084px"><use xlink:href="img/sprite.svg#icon-gift"></use></svg>
               <h2 class="advantages__title">Сувениры</h2>
               <p class="advantages__description">Не только китайского,<br> но и местного производства!</p>
             </li>
             <li class="advantages__item advantages__item--food">
-              <svg class="advantages__icon" width="76.166px" height="68.959px"><use xlink:href="img/sprite.svg#icon-burger"></use></svg>
               <h2 class="advantages__title">Еда</h2>
               <p class="advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
@@ -110,19 +106,18 @@
     <div class="reasons reasons--second">
       <div class="reasons__item reasons__item--blue reasons__item--bridge">
         <b class="reasons__title">Там есть <br> мост дьявола</b>
-        <p class="reasons__number">— №2 —</p>
         <p class="reasons__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
       </div>
 
-      <div class="reasons__img reasons__img--bridge">
-        <picture>
+      <div class="reasons__img">
+        <picture class="reasons__img--bridge">
           <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
           <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
 
           <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-          <img class="reasons__picture" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
+          <img class="reasons__picture" src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола" width="320" height="260">
         </picture>
       </div>
     </div>
@@ -130,20 +125,17 @@
     <div class="reasons">
       <div class="reasons__item reasons__item--gray">
           <b class="reasons__title">Небольшая площадь</b>
-          <p class="reasons__number">— №3 —</p>
           <p class="reasons__text">Все интересные места находятся очень близко</p>
       </div>
 
-      <div class="reasons__item reasons__item--gray reasons--border">
+      <div class="reasons__item reasons__item--gray reasons__item--border">
           <b class="reasons__title">Красивая дорога</b>
-          <p class="reasons__number">— №4 —</p>
           <p class="reasons__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </div>
 
-      <div class="reasons__item reasons__item--gray reasons--border">
+      <div class="reasons__item reasons__item--gray reasons__item--border">
         <div class="reasons__wrapper">
           <b class="reasons__title">Мало туристов</b>
-          <p class="reasons__number">— №5 —</p>
           <p class="reasons__text">Большинство едет в Гранд Каньон и толпится там</p>
         </div>
       </div>

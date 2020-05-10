@@ -17,6 +17,14 @@
 .reasons__text {
   margin: 0;
   line-height: 21px;
+
+  &::before {
+    counter-increment: section;
+    content: "– №" counter(section) " –";
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 15px;
+  }
 }
 
 .reasons__number {
@@ -61,7 +69,7 @@
   display: none;
 }
 
-.reasons--border::before {
+.reasons__item--border::before {
   content: "";
   display: block;
   position: absolute;
@@ -142,7 +150,7 @@
     line-height: 26px;
   }
 
-  .reasons--border::before {
+  .reasons__item--border::before {
     display: none;
   }
 
@@ -152,6 +160,10 @@
 
   .reasons__img--bridge {
     order: -1;
+  }
+
+  .reasons__picture {
+    width: 100%;
   }
 }
 

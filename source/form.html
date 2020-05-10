@@ -20,7 +20,7 @@
   <nav class="nav">
     <div class="nav__wrapper">
       <ul class="nav__list">
-        <li class="nav__item button--close">
+        <li class="nav__item nav__item--close">
           <svg class="nav__icon-cross" xmlns="http://www.w3.org/2000/svg" width="22.2" height="22.2"><path d="M22.2 2.8L19.4 0l-8.3 8.3L2.8 0 0 2.8l8.3 8.3L0 19.4l2.8 2.8 8.3-8.3 8.3 8.3 2.8-2.8-8.3-8.3z"/></svg>
         </li>
         <li class="nav__item">
@@ -43,7 +43,7 @@
     <a class="main-header__logo">
       <picture>
         <source class="main-header__logo-img" srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
-        <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona">
+        <img class="main-header__logo-img" src="img/logo-sedona-mobile.svg" alt="Логотип City of Sedona" width="102" height="84">
       </picture>
     </a>
     <button class="main-header__nav-toggle" type="button">
@@ -81,10 +81,10 @@
       <fieldset class="review__item review__item--contacts">
         <h2 class="review__title">Контактная информация:</h2>
         <div class="review__wrapper">
-          <label class="review__label--normal review__label--tel">
+          <label class="review__label review__label--normal review__label--tel">
             <span class="review__wrapper"><span class="review__hidden">Контактный </span>телефон*:</span><input class="review__input" type="tel" name="phone" value="Введите телефон" required="">
           </label>
-          <label class="review__label--normal review__label--email">
+          <label class="review__label review__label--normal review__label--email">
             <span class="review__wrapper">Электронная почта*: </span><input class="review__input review__input--email" type="email" name="email" value="Введите e-mail" required="">
           </label>
         </div>
@@ -94,15 +94,15 @@
         <h2 class="review__title">Ваше общее впечатление:</h2>
         <label class="review__label-wrapper">
           <input class="review__radio" type="radio" name="impress" value="positive" checked="">
-          <span class="review__label--bold">Скорее положительное</span>
+          <span class="review__label review__label--bold">Скорее положительное</span>
         </label>
         <label class="review__label-wrapper">
           <input class="review__radio" type="radio" name="impress" value="negative">
-          <span class="review__label--bold">Скорее отрицательное</span>
+          <span class="review__label review__label--bold">Скорее отрицательное</span>
         </label>
         <label class="review__label-wrapper">
           <input class="review__radio" type="radio" name="impress" value="no-answer">
-          <span class="review__label--bold">Затрудняюсь ответить</span>
+          <span class="review__label review__label--bold">Затрудняюсь ответить</span>
         </label>
       </fieldset>
 
@@ -111,19 +111,19 @@
         <div class="review__wrapper">
           <label class="review__label-wrapper">
             <input class="review__checkbox" type="checkbox" name="bridge" checked="">
-            <span class="review__label--bold">Мост Дьявола</span>
+            <span class="review__label review__label--bold">Мост Дьявола</span>
           </label>
           <label class="review__label-wrapper">
             <input class="review__checkbox" type="checkbox" name="mountain" checked="">
-            <span class="review__label--bold">Гора-Колокол</span>
+            <span class="review__lebel review__label--bold">Гора-Колокол</span>
           </label>
           <label class="review__label-wrapper">
             <input class="review__checkbox" type="checkbox" name="park" checked="">
-            <span class="review__label--bold">Слайд-парк</span>
+            <span class="review__label review__label--bold">Слайд-парк</span>
           </label>
           <label class="review__label-wrapper">
             <input class="review__checkbox" type="checkbox" name="rocks">
-            <span class="review__label--bold">Красные скалы</span>
+            <span class="review__label review__label--bold">Красные скалы</span>
           </label>
         </div>
       </fieldset>
