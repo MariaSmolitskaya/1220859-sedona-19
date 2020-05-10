@@ -17,7 +17,9 @@
   margin: 0;
 }
 
-.advantages__item--home::before {
+.advantages__item--home::before,
+.advantages__item--souvenirs::before,
+.advantages__item--food::before {
   content: "";
   width: 37px;
   height: 36px;
@@ -25,26 +27,19 @@
   position: absolute;
   left: -49px;
   top: -8px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .advantages__item--souvenirs::before {
-  content: "";
-  width: 37px;
-  height: 36px;
   background-image: url("../../img/icon-gift.svg");
-  position: absolute;
-  left: -49px;
-  top: -8px;
+  left: -45px;
 }
 
 .advantages__item--food::before {
-  content: "";
-  width: 37px;
-  height: 36px;
   background-image: url("../../img/icon-burger.svg");
-  position: absolute;
-  left: -49px;
-  top: -8px;
+  top: -5px;
+  left: -50px;
 }
 
 .advantages__description br {
