@@ -82,10 +82,10 @@
         <h2 class="review__title">Контактная информация:</h2>
         <div class="review__wrapper">
           <label class="review__label review__label--normal review__label--tel">
-            <span class="review__wrapper"><span class="review__hidden">Контактный </span>телефон*:</span><input class="review__input" type="tel" name="phone" placeholder="Введите телефон" required="">
+            <span class="review__wrapper"><span class="review__hidden">Контактный </span>телефон*:</span><input class="review__input" type="tel" name="phone" placeholder="Введите телефон" pattern="(\+79[0-9]{9}|8[0-9]{10})" required>
           </label>
           <label class="review__label review__label--normal review__label--email">
-            <span class="review__wrapper">Электронная почта*: </span><input class="review__input review__input--email" type="email" name="email" placeholder="Введите e-mail" required="">
+            <span class="review__wrapper">Электронная почта*: </span><input class="review__input review__input--email" type="email" name="email" placeholder="Введите e-mail" pattern="/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$" required>
           </label>
         </div>
       </fieldset>
