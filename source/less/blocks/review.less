@@ -23,10 +23,13 @@
   font-family: @ff-primary;
   font-size: 18px;
   font-weight: bold;
-  color: @black;
   background-color: @gray-light;
   border: none;
   padding-left: 22px;
+
+  &::placeholder {
+    color: @black;
+  }
 
   &:hover {
     background-color: darken(@gray-light, 10%);
@@ -266,6 +269,10 @@ input[name="patronymic"] {
   padding-top: 19px;
   padding-left: 21px;
   resize: none;
+
+  &::placeholder {
+  color: @black;
+}
 }
 
 .review__submit {
