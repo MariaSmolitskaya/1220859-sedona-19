@@ -7,7 +7,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 78px;
+  margin-bottom: 75px;
   width: 280px;
   height: 66px;
   background-color: @gray-light;
@@ -17,7 +17,11 @@
 .video__replay {
   position: absolute;
   top: 22px;
-  left: 25px;
+  left: 20px;
+  border: 0 none;
+}
+
+.video__icon {
   opacity: 0.8;
 
   &:hover {
@@ -32,34 +36,50 @@
 .video__subtitles {
   position: absolute;
   top: 23px;
-  right: 74px;
-  opacity: 0.8;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &:active {
-    opacity: 0.2;
-  }
+  right: 70px;
+  border: 0 none;
 }
 
 .video__fullscreen {
   position: absolute;
   top: 23px;
-  right: 23px;
-  opacity: 0.8;
+  right: 18px;
+  border: 0 none;
+}
 
-  &:hover {
-    opacity: 1;
-  }
+.video__block {
+  width: 280px;
+  height: 45px;
+  background-color: rgba(@black, 0.5);
+  position: absolute;
+  top: -45px;
+}
 
-  &:active {
-    opacity: 0.2;
-  }
+.video__scale {
+  width: 235px;
+  height: 3px;
+  opacity: 0.2;
+  background-color: @base-color;
+  position: absolute;
+  top: -22px;
+  left: 22px;
+}
+
+.video__slider {
+  width: 11px;
+  height: 10px;
+  background-color: @base-color;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  left: 57px;
 }
 
 @media (min-width: @tablet-width) {
+  .video__img {
+    width: 648px;
+  }
+
   .video__controls {
     width: 648px;
     height: 93px;
@@ -72,7 +92,11 @@
 
   .video__replay {
     top: 35px;
-    left: 35px;
+    left: 30px;
+    background-color: transparent;
+  }
+
+  .video__icon {
     fill: @base-color;
     opacity: 1;
 
@@ -87,40 +111,22 @@
 
   .video__subtitles {
     top: 36px;
-    right: 92px;
-    fill: @base-color;
-    opacity: 1;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+    right: 85px;
+    background-color: transparent;
   }
 
   .video__fullscreen {
     top: 36px;
-    right: 41px;
-    fill: @base-color;
-    opacity: 1;
+    right: 35px;
+    background-color: transparent;
+  }
 
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  .video__block {
+    display: none;
   }
 
   .video__scale {
     width: 389px;
-    height: 3px;
-    opacity: 0.2;
-    background-color: @base-color;
-    position: absolute;
     top: 45px;
     left: 93px;
   }
@@ -128,15 +134,16 @@
   .video__slider {
     width: 11px;
     height: 10px;
-    background-color: @base-color;
-    border-radius: 50%;
-    position: absolute;
     top: 41px;
     left: 205px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .video__img {
+    width: 800px;
+  }
+
   .video__controls {
     width: 800px;
     margin-bottom: 85px;

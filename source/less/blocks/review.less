@@ -23,10 +23,35 @@
   font-family: @ff-primary;
   font-size: 18px;
   font-weight: bold;
-  color: @black;
   background-color: @gray-light;
   border: none;
   padding-left: 22px;
+
+  &::placeholder {
+    color: @black;
+  }
+
+  &::-webkit-input-placeholder {
+    color: @black;
+  }
+
+  &:-ms-input-placeholder {
+    color: @black;
+  }
+
+  &::-ms-input-placeholder {
+    color: @black;
+  }
+
+  &::-moz-placeholder {
+    color: @black;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: @black;
+    opacity: 1;
+  }
 
   &:hover {
     background-color: darken(@gray-light, 10%);
@@ -221,7 +246,7 @@ input[name="patronymic"] {
     width: 55px;
     height: 55px;
     background-color: @white-two;
-    border-radius: 20%;
+    border-radius: 10%;
   }
 
   &:hover::after {
@@ -266,13 +291,40 @@ input[name="patronymic"] {
   padding-top: 19px;
   padding-left: 21px;
   resize: none;
+  overflow: auto;
+
+  &::placeholder {
+    color: @black;
+  }
+
+  &::-webkit-input-placeholder {
+    color: @black;
+  }
+
+  &:-ms-input-placeholder {
+    color: @black;
+  }
+
+  &::-ms-input-placeholder {
+    color: @black;
+  }
+
+  &::-moz-placeholder {
+    color: @black;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: @black;
+    opacity: 1;
+  }
 }
 
 .review__submit {
   font-family: @ff-primary;
   width: 280px;
   font-size: 21px;
-  margin: 42px 20px 47px;
+  margin: 39px 20px 73px;
 }
 
 .review__note {
@@ -301,7 +353,7 @@ input[name="patronymic"] {
 
   .review__item--impress {
     order: -1;
-    margin-right: 109px;
+    margin-right: 105px;
   }
 
   .review__item--impress .review__title {
@@ -425,6 +477,7 @@ input[name="patronymic"] {
 
   .review__button {
     width: 100%;
+    height: 170px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -433,7 +486,7 @@ input[name="patronymic"] {
   .review__submit {
     width: 324px;
     height: 58px;
-    margin-top: 56px;
+    margin-top: 50px;
     margin-left: 0;
   }
 
@@ -488,17 +541,18 @@ input[name="patronymic"] {
     display: flex;
   }
 
-  .review--contacts .review__label--normal {
+  .review__item--contacts .review__label--normal {
     flex-direction: row;
     align-items: baseline;
 
     &::after {
       top: 10px;
+      right: 7px;
     }
   }
 
   .review__item--contacts .review__input {
-    width: 100%;
+    width: 257px;
     margin-left: 15px;
   }
 
@@ -545,6 +599,10 @@ input[name="patronymic"] {
 
   .review__item--desc {
     margin-top: 45px;
+  }
+
+  .review__button {
+    height: 173px;
   }
 
   .review__submit {
