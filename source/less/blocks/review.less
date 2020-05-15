@@ -194,10 +194,15 @@ input[name="patronymic"] {
   &:active::after {
     background-color: darken(@white-two, 20%);
   }
+}
 
-  &:disabled {
-    background-color: @white-four;
-  }
+.review__radio:disabled ~ .review__label--bold::after {
+  background-color: @disabled;
+}
+
+.review__radio:focus ~ .review__label--bold::after,
+.review__radio:active ~ .review__label--bold::after {
+  outline: 1px solid @light-blue;
 }
 
 .review__radio:checked + .review__label--bold::before {
@@ -237,6 +242,15 @@ input[name="patronymic"] {
   opacity: 0;
   width: 50px;
   height: 50px;
+}
+
+.review__checkbox:disabled ~ .review__label--bold::after {
+  background-color: @disabled;
+}
+
+.review__checkbox:focus ~ .review__label--bold::after,
+.review__checkbox:active ~ .review__label--bold::after {
+  outline: 1px solid @light-blue;
 }
 
 .review__item--sites .review__label--bold {
