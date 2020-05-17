@@ -74,6 +74,7 @@
 
   .nav__list {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     background-color: @base-color;
   }
@@ -89,6 +90,10 @@
   .nav__item:nth-child(2),
   .nav__item:nth-child(n+3) {
     box-shadow: none;
+  }
+
+  .nav__item:nth-child(3) {
+    margin-right: 100px;
   }
 
   .nav__item:nth-child(4) {
