@@ -70,7 +70,8 @@
 
 input[name="name"] {
   margin-left: 14px;
-  width: 230px;
+  max-width: 230px;
+  min-width: 192px;
 }
 
 input[name="surname"] {
@@ -413,11 +414,17 @@ input[name="patronymic"] {
     margin-bottom: 60px;
   }
 
+  .review__item--intro {
+    max-width: 267px;
+  }
+
   input[name="name"] {
     margin-left: 12px;
     padding-top: 15px;
     padding-bottom: 19px;
-    width: 218px;
+    max-width: 218px;
+    min-width: 179px;
+
   }
 
   input[name="surname"] {
@@ -537,13 +544,19 @@ input[name="patronymic"] {
     max-width: 370px;
   }
 
+  .review__item--intro {
+    max-width: 400px;
+  }
+
   .review__item--intro .review__title {
     text-align: left;
     margin-left: 0;
   }
 
   input[name="name"] {
-    width: 350px;
+    max-width: 350px;
+    min-width: 233px;
+    flex-grow: 1;
   }
 
   input[name="surname"] {
@@ -584,7 +597,6 @@ input[name="patronymic"] {
 
   .review__label--normal .review__wrapper {
     margin-left: 0;
-    white-space: nowrap;
   }
 
   .review__label--tel {
@@ -592,8 +604,16 @@ input[name="patronymic"] {
     margin-right: 80px;
   }
 
+  .review__label--tel .review__wrapper {
+    max-width: 70px;
+  }
+
   .review__label--email {
     width: 483px;
+  }
+
+  .review__label--email .review__wrapper {
+    max-width: 147px;
   }
 
   .review__hidden {
