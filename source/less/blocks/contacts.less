@@ -10,6 +10,7 @@
   height: 48px;
   background-color: @light-blue;
   margin-right: 6px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,12 +34,10 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contacts__item:first-child {
-    margin-left: -8px;
-  }
-
   .contacts__list {
+    max-width: 250px;
     margin-top: 36px;
-    margin-left: -5px;
+    margin-left: -8px;
+    flex-wrap: wrap;
   }
 }
