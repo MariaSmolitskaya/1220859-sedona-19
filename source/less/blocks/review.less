@@ -202,6 +202,15 @@ input[name="patronymic"] {
   background-color: @disabled;
 }
 
+.review__radio:disabled:focus ~ .review__label--bold::after,
+.review__radio:disabled:active ~ .review__label--bold::after {
+  outline: 0 none;
+}
+
+.review__checkbox:disabled ~ .review__label--bold::before {
+  display: none;
+}
+
 .review__radio:focus ~ .review__label--bold::after,
 .review__radio:active ~ .review__label--bold::after {
   outline: 1px solid @light-blue;
@@ -248,8 +257,18 @@ input[name="patronymic"] {
   height: 50px;
 }
 
-.review__checkbox:disabled ~ .review__label--bold::after {
+.review__checkbox:disabled ~ .review__label--bold::after,
+.review__checkbox:disabled:hover ~ .review__label--bold::after{
   background-color: @disabled;
+}
+
+.review__checkbox:disabled:focus ~ .review__label--bold::after,
+.review__checkbox:disabled:active ~ .review__label--bold::after {
+  outline: 0 none;
+}
+
+.review__checkbox:disabled ~ .review__label--bold::before {
+  display: none;
 }
 
 .review__checkbox:focus ~ .review__label--bold::after,
