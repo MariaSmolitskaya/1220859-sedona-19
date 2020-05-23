@@ -5,15 +5,18 @@
   margin: 0;
 }
 
-.contacts__item {
+.contacts__link {
   width: 46px;
   height: 48px;
-  background-color: @light-blue;
-  margin-right: 6px;
-  margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contacts__item {
+  background-color: @light-blue;
+  margin-right: 6px;
+  margin-bottom: 5px;
 
   &:hover {
     background-color: darken(@light-blue, 10%);
