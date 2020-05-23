@@ -5,15 +5,18 @@
   position: relative;
 }
 
-.main-header__logo-img {
+.main-header__logo {
+  width: 188px;
+  height: 96px;
   display: block;
   position: absolute;
   left: 50%;
   margin-left: -51px;
   z-index: 10;
 
-  &:active {
-    outline: 1px solid @light-blue;
+  &:active,
+  &:focus {
+    outline: 2px solid @light-blue;
   }
 }
 
@@ -33,7 +36,7 @@
     height: 0;
   }
 
-  .main-header__logo-img {
+  .main-header__logo {
     top: 0;
   }
 
@@ -47,8 +50,11 @@
     width: 1200px;
   }
 
+  .main-header__logo {
+    margin-left: -93px;
+  }
+
   .main-header__logo-img {
     width: 188px;
-    margin-left: -93px;
   }
 }
